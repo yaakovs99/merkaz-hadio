@@ -281,6 +281,22 @@
   .sw{ width: 24px; height: 24px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); cursor: pointer; padding: 0; }
   .sw[aria-pressed="true"]{ box-shadow: 0 0 0 2px var(--ink); }
   .sw-name{ font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+
+
+  /* ---------- legal popups (accessibility, cancellation) ---------- */
+  .link-btn{ background:none; border:0; padding:0; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .legal-links{ display:flex; flex-wrap:wrap; justify-content:center; gap: 6px 22px; }
+  .legal-overlay{ position: fixed; inset:0; background: rgba(15,13,8,0.6); display:none; align-items:center; justify-content:center; z-index: 10000; padding: 16px; }
+  .legal-overlay.open{ display:flex; }
+  .legal-modal{ position: relative; background: var(--paper); color: var(--ink); width: 100%; max-width: 680px; max-height: 88vh; overflow:auto; border-radius: 10px; border-top: 6px solid var(--yellow); padding: 28px 26px 30px; font-family: 'Assistant', sans-serif; text-align: right; }
+  .legal-close{ position: sticky; top: 0; float: left; width: 36px; height: 36px; border-radius: 50%; border: none; background: var(--ink); color: var(--yellow); font-size: 20px; line-height: 1; cursor: pointer; }
+  .legal-modal h2{ font-size: 26px; margin: 0 0 12px; }
+  .legal-modal h3{ font-family:'Assistant',sans-serif; font-weight: 800; font-size: 17px; margin: 20px 0 6px; }
+  .legal-modal p, .legal-modal li{ font-size: 16px; line-height: 1.7; margin: 0 0 8px; }
+  .legal-modal ul{ margin: 0 0 8px; padding: 0 20px 0 0; }
+  .legal-modal a{ text-decoration: underline; text-underline-offset: 3px; }
+  .legal-note{ font-size: 14px; color: var(--ink-soft); margin-top: 18px; }
+  @media (max-width: 780px){ .end-footer{ padding-bottom: 96px !important; } }
 </style>
 </head>
 <body>
@@ -793,13 +809,191 @@
   אתר זה משתמש בעוגיות (Cookies) ובכלי ניתוח של Google Analytics ו-Google Ads כדי לנתח תנועה ולשפר את חווית המשתמש. 
   <button onclick="document.getElementById('cookie-banner').style.display='none'" style="background: #28a745; color: white; border: none; padding: 5px 15px; margin-right: 10px; cursor: pointer; border-radius: 4px;">מאשר/ת</button>
 </div>
+<div class="legal-overlay" id="legalA11y" role="dialog" aria-modal="true" aria-labelledby="legalA11yT">
+  <div class="legal-modal">
+    <button type="button" class="legal-close" aria-label="סגירה">×</button>
+    <h2 id="legalA11yT">הצהרת נגישות</h2>
+    <p>מרכז הדיו נתניה רואה חשיבות רבה במתן שירות שוויוני ונגיש לכלל הלקוחות, ובהם אנשים עם מוגבלות, ופועל כדי שכל אחד ואחת יוכלו להשתמש באתר בנוחות ובעצמאות.</p>
+    <h3>מה עשינו באתר</h3>
+    <ul>
+      <li>האתר כתוב בעברית, עם הגדרת שפה וכיוון קריאה מימין לשמאל.</li>
+      <li>אפשר לנווט באתר באמצעות המקלדת. האלמנט שנמצא כרגע במיקוד מסומן בבירור.</li>
+      <li>לשדה החיפוש יש תווית לקוראי מסך, ולכפתורי הסינון ולבחירת הצבע של המוצרים יש תיאור ומצב נבחר שנקראים בקורא מסך.</li>
+      <li>לתמונות המרכזיות ולתמונות המוצרים יש תיאור חלופי.</li>
+      <li>האתר מותאם לתצוגה בטלפון, בטאבלט ובמחשב, וניתן להגדיל בו את הטקסט.</li>
+      <li>האתר מכבד את הגדרת מערכת ההפעלה להפחתת תנועה, ואז האנימציות מושבתות.</li>
+    </ul>
+    <h3>מגבלות ידועות</h3>
+    <p>אנו ממשיכים לשפר את הנגישות. ייתכן שחלקים באתר עדיין אינם נגישים באופן מלא, וכן שחלק מהרכיבים החיצוניים, כמו וואטסאפ וגוגל, אינם בשליטתנו.</p>
+    <h3>נתקלתם בבעיה? נשמח לעזור</h3>
+    <p>אם נתקלתם בקושי בשימוש באתר, או שאתם מעוניינים בשירות, בהזמנה או במידע בדרך אחרת, פנו אלינו ונטפל בפנייה בהקדם:</p>
+    <ul>
+      <li>טלפון: <a href="tel:+972553009967" dir="ltr">055-3009967</a></li>
+      <li>וואטסאפ: <a href="https://wa.me/972553009967" target="_blank" rel="noopener" dir="ltr">055-3009967</a></li>
+      <li>דוא״ל: <a href="mailto:centrl.dio@gmail.com" dir="ltr">centrl.dio@gmail.com</a></li>
+      <li>כתובת: רח' המחקר 3, נתניה</li>
+    </ul>
+    <p class="legal-note">הצהרת הנגישות עודכנה לאחרונה באוקטובר 2026.</p>
+  </div>
+</div>
+
+<div class="legal-overlay" id="legalCancel" role="dialog" aria-modal="true" aria-labelledby="legalCancelT">
+  <div class="legal-modal">
+    <button type="button" class="legal-close" aria-label="סגירה">×</button>
+    <h2 id="legalCancelT">מדיניות ביטול עסקה והחזרות</h2>
+    <p>המדיניות מבוססת על חוק הגנת הצרכן, התשמ"א-1981, ועל תקנות הגנת הצרכן (ביטול עסקה), התשע"א-2010. אין בה כדי לגרוע מזכויותיכם לפי דין.</p>
+
+    <h3>הזמנה מרחוק (בטלפון, בוואטסאפ או באתר, עם משלוח)</h3>
+    <p>אפשר לבטל את העסקה תוך 14 ימים מיום קבלת המוצר או מיום קבלת מסמך הגילוי בכתב, המאוחר מביניהם.</p>
+
+    <h3>רכישה בחנות</h3>
+    <p>אפשר לבטל רכישה בחנות בתוך פרק הזמן שהחוק קובע לאותו סוג מוצר, בתנאים האלה:</p>
+    <ul>
+      <li>ערך המוצר עולה על 50 ש"ח.</li>
+      <li>המוצר לא נפגם ולא נעשה בו שימוש.</li>
+      <li>המוצר הוחזר אלינו עם חשבונית או הוכחת רכישה אחרת.</li>
+    </ul>
+
+    <h3>מצב המוצר</h3>
+    <p>יש להחזיר את המוצר שלם, באריזתו. פתיחת האריזה המקורית אינה נחשבת שימוש. טונר או דיו שהותקנו במדפסת נחשבים ככלל למוצר שנעשה בו שימוש, ולכן לא ניתן להחזירם אלא אם נמצאה בהם תקלה.</p>
+
+    <h3>דמי ביטול</h3>
+    <p>בביטול שאינו נובע מפגם במוצר ינוכו דמי ביטול בשיעור של 5% ממחיר המוצר או 100 ש"ח, לפי הנמוך מביניהם. בביטול בשל מוצר פגום, מוצר שונה ממה שהוזמן או הפרת התחייבות מצדנו, לא ינוכו דמי ביטול.</p>
+
+    <h3>החזר כספי</h3>
+    <p>ההחזר ייעשה באמצעי התשלום שבו שולם. בהזמנה מרחוק ההחזר ייעשה תוך 14 ימים מקבלת הודעת הביטול. ברכישה בחנות ההחזר ייעשה בהקדם, ולא יאוחר מ-7 ימי עסקים.</p>
+
+    <h3>החזרה אחרי תום תקופת הביטול</h3>
+    <p>אם חלפה תקופת הביטול הקבועה בחוק והמוצר שלם, באריזתו ובלי שנעשה בו שימוש, נשקול את ההחזרה, ככלל בזיכוי בחנות בסכום ששולם. תוקף הזיכוי הוא שנתיים לפחות.</p>
+
+    <h3>מוצר פגום או שונה מהמוזמן</h3>
+    <p>במקרה כזה אפשר לבחור בין תיקון, החלפה או החזר כספי לפי החוק, ללא דמי ביטול. את המוצר נאסוף על חשבוננו. בביטול אחר, משלוח ההחזרה הוא על חשבון הלקוח.</p>
+
+    <h3>מוצרים שאי אפשר לבטל</h3>
+    <p>מוצר שיוצר במיוחד עבורכם לפי הזמנה אישית.</p>
+
+    <h3>זכויות מיוחדות</h3>
+    <p>לאזרחים ותיקים, לעולים חדשים ולאנשים עם מוגבלות יש זכויות ביטול מורחבות בעסקה שנעשתה מרחוק, כמפורט בחוק.</p>
+
+    <h3>איך מבטלים?</h3>
+    <p>פנו אלינו בטלפון <a href="tel:+972553009967" dir="ltr">055-3009967</a>, בוואטסאפ או במייל <a href="mailto:centrl.dio@gmail.com" dir="ltr">centrl.dio@gmail.com</a>, וציינו את שם המוצר ואת מועד הרכישה.</p>
+  </div>
+</div>
+
+<div class="legal-overlay" id="legalPrivacy" role="dialog" aria-modal="true" aria-labelledby="legalPrivacyT">
+  <div class="legal-modal">
+    <button type="button" class="legal-close" aria-label="סגירה">×</button>
+    <h2 id="legalPrivacyT">מדיניות פרטיות</h2>
+    <p>מרכז הדיו נתניה (רח' המחקר 3, נתניה) מכבד את פרטיותכם. מדיניות זו מסבירה איזה מידע נאסף באתר, למה, ומה הזכויות שלכם, בהתאם לחוק הגנת הפרטיות, התשמ"א-1981.</p>
+
+    <h3>איזה מידע אנחנו אוספים</h3>
+    <ul>
+      <li><strong>מידע שאתם מוסרים לנו:</strong> כשאתם פונים אלינו בטלפון, בוואטסאפ או במייל, אנחנו מקבלים את מה שתבחרו למסור, למשל שם, מספר טלפון, דגם מדפסת ופרטי ההזמנה. האתר עצמו אינו כולל טופס שמוסר מידע אישי.</li>
+      <li><strong>מידע טכני:</strong> בעת הגלישה נאספים נתונים כמו סוג המכשיר והדפדפן, העמודים שנצפו, משך הביקור ומקור ההגעה, באמצעות עוגיות (Cookies) וכלי ניתוח של גוגל.</li>
+    </ul>
+
+    <h3>למה אנחנו משתמשים במידע</h3>
+    <ul>
+      <li>כדי לטפל בפניות ובהזמנות, לתת הצעות מחיר ולספק את המוצרים והשירות.</li>
+      <li>כדי למדוד את פעילות האתר ולשפר אותו.</li>
+      <li>כדי למדוד את יעילות המודעות שלנו בגוגל.</li>
+      <li>כדי לעמוד בדרישות החוק, למשל הוצאת חשבונית.</li>
+    </ul>
+    <p>איננו שולחים הודעות פרסומיות ללא הסכמתכם.</p>
+
+    <h3>עוגיות וכלי ניתוח</h3>
+    <p>האתר משתמש ב-Google Analytics וב-Google Ads כדי לנתח תנועה ולמדוד פרסום. גוגל עשויה לשמור עוגיות בדפדפן שלכם ולעבד נתונים בהתאם למדיניות הפרטיות שלה. אפשר לחסום או למחוק עוגיות בהגדרות הדפדפן. חסימה עלולה לפגוע בפעולה של חלק מהתכונות באתר.</p>
+
+    <h3>עם מי אנחנו משתפים מידע</h3>
+    <p>איננו מוכרים מידע אישי. המידע עשוי להיות מועבר רק לגורמים שנדרשים כדי לספק לכם את השירות, כמו חברת משלוחים, ספקי תוכנה וניתוח כמו גוגל, ושירות ההודעות וואטסאפ שבו אתם בוחרים לפנות אלינו. כמו כן נעביר מידע אם נידרש לכך על פי דין.</p>
+
+    <h3>אבטחת מידע ושמירה</h3>
+    <p>אנחנו נוקטים אמצעים סבירים כדי להגן על המידע, ושומרים אותו רק לתקופה הנדרשת לטיפול בפנייה ולעמידה בחובות החוק. אין אפשרות להבטיח אבטחה מוחלטת של מידע המועבר באינטרנט.</p>
+
+    <h3>הזכויות שלכם</h3>
+    <p>לפי החוק אתם רשאים לבקש לעיין במידע שנשמר עליכם, לתקן מידע שגוי ולבקש למחוק מידע, בכפוף לדין. מסירת מידע אישי לאתר ולעסק היא בהסכמתכם ואינה חובה לפי חוק. ייתכן שבלי פרטים מסוימים לא נוכל לטפל בהזמנה.</p>
+
+    <h3>פניות בנושא פרטיות</h3>
+    <p>לבקשות ולשאלות בנושא פרטיות פנו אלינו בטלפון <a href="tel:+972553009967" dir="ltr">055-3009967</a>, בוואטסאפ או במייל <a href="mailto:centrl.dio@gmail.com" dir="ltr">centrl.dio@gmail.com</a>.</p>
+
+    <p class="legal-note">מדיניות הפרטיות עודכנה לאחרונה באוקטובר 2026. אנו עשויים לעדכן אותה מעת לעת, והנוסח העדכני יופיע באתר.</p>
+  </div>
+</div>
+
+<div class="legal-overlay" id="legalTerms" role="dialog" aria-modal="true" aria-labelledby="legalTermsT">
+  <div class="legal-modal">
+    <button type="button" class="legal-close" aria-label="סגירה">×</button>
+    <h2 id="legalTermsT">תנאי שימוש</h2>
+    <p>ברוכים הבאים לאתר מרכז הדיו נתניה. השימוש באתר מהווה הסכמה לתנאים אלה. אם אינכם מסכימים להם, אנא הימנעו משימוש באתר. הכתוב בלשון זכר נועד לנוחות בלבד ומיועד לכל המינים.</p>
+
+    <h3>מטרת האתר</h3>
+    <p>האתר מציג מידע על המוצרים והשירותים של מרכז הדיו נתניה: מדפסות, טונרים, דיו, ראשי דיו, תופים וציוד משרדי. האתר אינו חנות מקוונת. הזמנות מתבצעות מול העסק בטלפון, בוואטסאפ או בחנות, ובאישור שלנו.</p>
+
+    <h3>מחירים, מבצעים וזמינות</h3>
+    <ul>
+      <li>המחירים, המבצעים והזמינות כפופים לאישור שלנו בעת ההזמנה ועשויים להשתנות ללא הודעה מראש.</li>
+      <li>המבצעים תקפים עד גמר המלאי, ואינם ניתנים לצירוף למבצעים אחרים אלא אם נאמר אחרת.</li>
+      <li>בכל מקרה של טעות דפוס או טעות סופר באתר, העסק רשאי לתקן אותה.</li>
+      <li>התמונות באתר להמחשה בלבד, והמוצר בפועל עשוי להיראות אחרת.</li>
+    </ul>
+
+    <h3>התאמת מוצרים למדפסת</h3>
+    <p>רשימות המדפסות התואמות באתר נועדו להנחיה כללית בלבד. לפני הרכישה מומלץ לוודא מולנו את דגם המדפסת המדויק, ואנחנו נשמח לעזור. ייתכנו הבדלים בין גרסאות של אותו דגם.</p>
+
+    <h3>הזמנה, ביטול והחזרות</h3>
+    <p>ביטול עסקה, החזרות ופיצוי מוסדרים במדיניות ביטול העסקה ובהוראות חוק הגנת הצרכן. ראו את מדיניות ביטול העסקה בתחתית האתר.</p>
+
+    <h3>קניין רוחני</h3>
+    <p>התכנים באתר, ובהם הטקסטים, העיצוב, הלוגו והתמונות, שייכים למרכז הדיו נתניה או לבעלי הזכויות בהם. אסור להעתיק, להפיץ או לפרסם אותם ללא אישור בכתב. שמות המותגים והסימנים המסחריים, כגון HP, Canon, Brother, Samsung ו-Pantum, שייכים לבעליהם, ומוצגים באתר רק כדי לציין את התאמת המוצרים.</p>
+
+    <h3>אחריות</h3>
+    <p>אנחנו משתדלים שהמידע באתר יהיה מדויק ועדכני, אך איננו מתחייבים שהאתר יפעל ללא הפרעות או שגיאות. השימוש באתר הוא באחריות המשתמש. אין באמור כדי לפגוע בזכויותיכם כצרכנים לפי דין.</p>
+
+    <h3>קישורים לאתרים חיצוניים</h3>
+    <p>באתר יש קישורים לשירותים של צד שלישי, כמו וואטסאפ וגוגל. איננו אחראים לתכנים או למדיניות של אתרים ושירותים אלה.</p>
+
+    <h3>פרטיות</h3>
+    <p>השימוש במידע אישי מוסדר במדיניות הפרטיות שבתחתית האתר.</p>
+
+    <h3>שינויים בתנאים</h3>
+    <p>אנו רשאים לעדכן תנאים אלה מעת לעת. הנוסח המעודכן יפורסם באתר ויחול מרגע פרסומו.</p>
+
+    <h3>דין וסמכות שיפוט</h3>
+    <p>על תנאים אלה יחול הדין הישראלי. סמכות השיפוט הבלעדית נתונה לבתי המשפט המוסמכים בנתניה, בכפוף להוראות כל דין.</p>
+
+    <h3>יצירת קשר</h3>
+    <p>טלפון ווואטסאפ: <a href="tel:+972553009967" dir="ltr">055-3009967</a> | דוא״ל: <a href="mailto:centrl.dio@gmail.com" dir="ltr">centrl.dio@gmail.com</a> | רח' המחקר 3, נתניה.</p>
+
+    <p class="legal-note">תנאי השימוש עודכנו לאחרונה באוקטובר 2026.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var last = null;
+  function openM(el){ last = document.activeElement; el.classList.add('open'); var b = el.querySelector('.legal-close'); if(b) b.focus(); }
+  function closeM(el){ el.classList.remove('open'); if(last && last.focus) last.focus(); }
+  [].slice.call(document.querySelectorAll('.legal-overlay')).forEach(function(el){
+    el.addEventListener('click', function(e){ if(e.target === el || e.target.closest('.legal-close')) closeM(el); });
+  });
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-legal]'); if(!btn) return;
+    var el = document.getElementById(btn.getAttribute('data-legal')); if(el) openM(el);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Escape') return;
+    [].slice.call(document.querySelectorAll('.legal-overlay.open')).forEach(closeM);
+  });
+})();
+</script>
  <!-- פוטר נגישות ומדיניות -->
-<footer style="text-align: center; padding: 20px; background: #f1f1f1; margin-top: 40px; font-family: sans-serif; font-size: 13px; line-height: 1.8;">
+<footer class="end-footer" style="text-align: center; padding: 20px; background: #f1f1f1; margin-top: 40px; font-family: sans-serif; font-size: 13px; line-height: 1.8;">
   <p>© מרכז הדיו נתניה - כל הזכויות שמורות | כל המחירים והמבצעים כפופים למלאי הקיים. התמונות להמחשה בלבד. ט.ל.ח.</p>
-  <p>
-    <a href="#accessibility" onclick="alert('הצהרת נגישות:\nמרכז הדיו רואה חשיבות רבה במתן שירות שוויוני לכלל הלקוחות. האתר נבנה בהתאם לתקני הנגישות המקובלים (WCAG 2.1 level AA).\nאם נתקלתם בבעיית נגישות, אנא צרו עמנו קשר בטלפון או בוואטסאפ ונשמח לסייע!'); return false;" style="margin-left: 15px;">הצהרת נגישות</a>
-    |
-    <a href="#cancellation" onclick="alert('מדיניות ביטול עסקה ומשלוחים - מרכז הדיו:\n1. ניתן לבטל עסקה תוך 14 ימים מיום קבלת המוצר בהתאם לחוק הגנת הצרכן.\n2. הביטול מותנה בהחזרת המוצר באריזתו המקורית, שלם, שלא נפתח ושלא נעשה בו שימוש.\n3. מוצרים שאריזתם הרמטית נפתחה (כגון דיו/טונר) לא ניתן להחזיר.\n4. בביטול שלא עקב פגם ינוכו דמי ביטול כחוק (עד 5% או 100 ש״ח) ועלות המשלוח תחול על הלקוח.'); return false;" style="margin-right: 15px;">מדיניות ביטול עסקה</a>
+  <p class="legal-links">
+    <button type="button" class="link-btn" data-legal="legalA11y">הצהרת נגישות</button>
+    <button type="button" class="link-btn" data-legal="legalCancel">מדיניות ביטול עסקה</button>
+    <button type="button" class="link-btn" data-legal="legalPrivacy">מדיניות פרטיות</button>
+    <button type="button" class="link-btn" data-legal="legalTerms">תנאי שימוש</button>
   </p>
 </footer>
 
