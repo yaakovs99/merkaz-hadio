@@ -297,6 +297,37 @@
   .legal-modal a{ text-decoration: underline; text-underline-offset: 3px; }
   .legal-note{ font-size: 14px; color: var(--ink-soft); margin-top: 18px; }
   @media (max-width: 780px){ .end-footer{ padding-bottom: 96px !important; } }
+
+  /* ---------- accessibility toolbar ---------- */
+  .a11y-widget{ position: fixed; right: 14px; bottom: 100px; z-index: 9990; font-family: 'Assistant', Arial, sans-serif; direction: rtl; }
+  @media (min-width: 781px){ .a11y-widget{ bottom: 24px; } }
+  .a11y-fab{ width: 52px; height: 52px; border-radius: 50%; border: 3px solid #fff; background: #16151A; color: #F7DB04; cursor: pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 2px 10px rgba(0,0,0,.35); padding: 0; }
+  .a11y-fab svg{ width: 30px; height: 30px; }
+  .a11y-panel{ position: absolute; right: 0; bottom: 64px; width: 310px; max-width: calc(100vw - 28px); max-height: 70vh; overflow: auto; background: #FDFBF4; color: #16151A; border: 2px solid #16151A; border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,.35); padding: 16px; }
+  .a11y-panel[hidden]{ display: none; }
+  .a11y-head{ display:flex; align-items:center; justify-content: space-between; margin-bottom: 10px; }
+  .a11y-head h2{ font-family: 'Assistant', Arial, sans-serif; font-weight: 800; font-size: 19px; margin: 0; }
+  .a11y-x{ width: 34px; height: 34px; border-radius: 50%; border: 0; background: #16151A; color: #F7DB04; font-size: 20px; line-height: 1; cursor: pointer; }
+  .a11y-row{ display:flex; align-items:center; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid rgba(22,21,26,.14); font-size: 16px; font-weight: 700; }
+  .a11y-size{ display:flex; align-items:center; gap: 8px; }
+  .a11y-size button{ width: 40px; height: 40px; border-radius: 10px; border: 1px solid #16151A; background: #fff; color: #16151A; font-size: 22px; line-height: 1; cursor: pointer; }
+  .a11y-size button:disabled{ opacity: .35; cursor: not-allowed; }
+  .a11y-size output{ min-width: 46px; text-align:center; font-size: 15px; }
+  .a11y-sw{ position: relative; width: 50px; height: 28px; border-radius: 999px; border: 0; background: #cfcabb; cursor: pointer; flex-shrink: 0; padding: 0; }
+  .a11y-sw::after{ content:''; position:absolute; top: 3px; right: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: transform .15s; box-shadow: 0 1px 3px rgba(0,0,0,.35); }
+  .a11y-sw[aria-checked="true"]{ background: #1a7f37; }
+  .a11y-sw[aria-checked="true"]::after{ transform: translateX(-22px); }
+  .a11y-foot{ display:flex; align-items:center; justify-content: space-between; border-top: 1px solid rgba(22,21,26,.14); padding-top: 12px; margin-top: 2px; font-size: 15px; }
+  .a11y-foot button{ font: inherit; font-weight: 700; background: none; border: 0; padding: 4px 0; color: #16151A; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .a11y-widget button:focus-visible{ outline: 3px solid #2AA5D9; outline-offset: 2px; }
+  html{ overflow-x: clip; }
+  html.a11y-gray{ filter: grayscale(1); }
+  html.a11y-links a, html.a11y-links .link-btn{ background: #ff0 !important; color: #000 !important; outline: 2px solid #000; text-decoration: underline !important; }
+  html.a11y-font *{ font-family: Arial, Helvetica, sans-serif !important; letter-spacing: .02em; }
+  html.a11y-still *, html.a11y-still *::before, html.a11y-still *::after{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  html.a11y-contrast *:not(img):not(svg):not(svg *):not(.hero-img):not(.hero-scrim):not(.promo-photo):not(.pl-img):not(.sw):not(.pcard-img):not(.a11y-widget):not(.a11y-widget *){ background-color: #000 !important; color: #fff !important; border-color: #fff !important; text-shadow: none !important; }
+  html.a11y-contrast a:not(.a11y-widget *){ color: #ff0 !important; text-decoration: underline !important; }
+  html.a11y-contrast .pcard-img{ background: #fff !important; }
 </style>
 </head>
 <body>
@@ -809,6 +840,53 @@
   אתר זה משתמש בעוגיות (Cookies) ובכלי ניתוח של Google Analytics ו-Google Ads כדי לנתח תנועה ולשפר את חווית המשתמש. 
   <button onclick="document.getElementById('cookie-banner').style.display='none'" style="background: #28a745; color: white; border: none; padding: 5px 15px; margin-right: 10px; cursor: pointer; border-radius: 4px;">מאשר/ת</button>
 </div>
+<div class="a11y-widget" id="a11yWidget">
+  <button type="button" class="a11y-fab" id="a11yFab" aria-label="אפשרויות נגישות" aria-expanded="false" aria-controls="a11yPanel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8" fill="currentColor"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M8.5 21l3.5-6 3.5 6"/></svg>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="אפשרויות נגישות" hidden>
+    <div class="a11y-head"><h2>אפשרויות נגישות</h2><button type="button" class="a11y-x" id="a11yClose" aria-label="סגירה">×</button></div>
+    <div class="a11y-row"><span>גודל תצוגה</span>
+      <span class="a11y-size"><button type="button" id="a11yPlus" aria-label="הגדלה">+</button><output id="a11yPct" aria-live="polite">100%</output><button type="button" id="a11yMinus" aria-label="הקטנה">−</button></span></div>
+    <div class="a11y-row"><span id="l1">ניגודיות גבוהה</span><button type="button" class="a11y-sw" role="switch" aria-checked="false" aria-labelledby="l1" data-opt="contrast"></button></div>
+    <div class="a11y-row"><span id="l2">גווני אפור</span><button type="button" class="a11y-sw" role="switch" aria-checked="false" aria-labelledby="l2" data-opt="gray"></button></div>
+    <div class="a11y-row"><span id="l3">הדגשת קישורים</span><button type="button" class="a11y-sw" role="switch" aria-checked="false" aria-labelledby="l3" data-opt="links"></button></div>
+    <div class="a11y-row"><span id="l4">גופן קריא</span><button type="button" class="a11y-sw" role="switch" aria-checked="false" aria-labelledby="l4" data-opt="font"></button></div>
+    <div class="a11y-row"><span id="l5">עצירת אנימציות</span><button type="button" class="a11y-sw" role="switch" aria-checked="false" aria-labelledby="l5" data-opt="still"></button></div>
+    <div class="a11y-foot"><button type="button" id="a11yReset">איפוס</button><button type="button" id="a11yStatement">הצהרת נגישות</button></div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY = 'a11yPrefs', root = document.documentElement;
+  var widget = document.getElementById('a11yWidget'), fab = document.getElementById('a11yFab'), panel = document.getElementById('a11yPanel');
+  var pct = document.getElementById('a11yPct'), plus = document.getElementById('a11yPlus'), minus = document.getElementById('a11yMinus');
+  var ZMIN = 1, ZMAX = 1.4, ZSTEP = 0.1;
+  var DEF = {zoom:1, contrast:false, gray:false, links:false, font:false, still:false};
+  var st = {}; for(var k in DEF) st[k] = DEF[k];
+  try{ var saved = JSON.parse(localStorage.getItem(KEY) || 'null'); if(saved){ for(var k2 in DEF) if(saved[k2] !== undefined) st[k2] = saved[k2]; } }catch(e){}
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  function apply(){
+    var z = Math.min(ZMAX, Math.max(ZMIN, Math.round(st.zoom*10)/10)); st.zoom = z;
+    root.style.zoom = z > 1 ? z : ''; widget.style.zoom = z > 1 ? (1/z) : '';
+    root.classList.toggle('a11y-contrast', !!st.contrast); root.classList.toggle('a11y-gray', !!st.gray);
+    root.classList.toggle('a11y-links', !!st.links); root.classList.toggle('a11y-font', !!st.font); root.classList.toggle('a11y-still', !!st.still);
+    pct.textContent = Math.round(z*100) + '%'; plus.disabled = z >= ZMAX - 0.001; minus.disabled = z <= ZMIN + 0.001;
+    [].slice.call(panel.querySelectorAll('[data-opt]')).forEach(function(b){ b.setAttribute('aria-checked', st[b.getAttribute('data-opt')] ? 'true' : 'false'); });
+  }
+  function openP(){ panel.hidden = false; fab.setAttribute('aria-expanded','true'); plus.disabled ? minus.focus() : plus.focus(); }
+  function closeP(refocus){ panel.hidden = true; fab.setAttribute('aria-expanded','false'); if(refocus) fab.focus(); }
+  fab.addEventListener('click', function(){ panel.hidden ? openP() : closeP(true); });
+  document.getElementById('a11yClose').addEventListener('click', function(){ closeP(true); });
+  plus.addEventListener('click', function(){ st.zoom += ZSTEP; apply(); save(); });
+  minus.addEventListener('click', function(){ st.zoom -= ZSTEP; apply(); save(); });
+  panel.addEventListener('click', function(e){ var b = e.target.closest('[data-opt]'); if(!b) return; var o = b.getAttribute('data-opt'); st[o] = !st[o]; apply(); save(); });
+  document.getElementById('a11yReset').addEventListener('click', function(){ for(var k in DEF) st[k] = DEF[k]; apply(); save(); });
+  document.getElementById('a11yStatement').addEventListener('click', function(){ closeP(false); var m = document.getElementById('legalA11y'); if(m){ m.classList.add('open'); var c = m.querySelector('.legal-close'); if(c) c.focus(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !panel.hidden) closeP(true); });
+  apply();
+})();
+</script>
 <div class="legal-overlay" id="legalA11y" role="dialog" aria-modal="true" aria-labelledby="legalA11yT">
   <div class="legal-modal">
     <button type="button" class="legal-close" aria-label="סגירה">×</button>
@@ -822,6 +900,7 @@
       <li>לתמונות המרכזיות ולתמונות המוצרים יש תיאור חלופי.</li>
       <li>האתר מותאם לתצוגה בטלפון, בטאבלט ובמחשב, וניתן להגדיל בו את הטקסט.</li>
       <li>האתר מכבד את הגדרת מערכת ההפעלה להפחתת תנועה, ואז האנימציות מושבתות.</li>
+      <li>בתפריט הנגישות (הכפתור הצף בצד המסך) אפשר להגדיל את התצוגה, להפעיל ניגודיות גבוהה וגווני אפור, להדגיש קישורים, לעבור לגופן קריא ולעצור אנימציות.</li>
     </ul>
     <h3>מגבלות ידועות</h3>
     <p>אנו ממשיכים לשפר את הנגישות. ייתכן שחלקים באתר עדיין אינם נגישים באופן מלא, וכן שחלק מהרכיבים החיצוניים, כמו וואטסאפ וגוגל, אינם בשליטתנו.</p>
