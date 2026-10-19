@@ -601,7 +601,7 @@
     {brand:'HP', type:'toner', name:'05A', sku:'CE505A', compat:'LaserJet P2035, P2055'},
     {brand:'HP', type:'toner', name:'CF410A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF410A','CF411A','CF412A','CF413A'], compat:'Color LaserJet Pro M452dn, M452dw, M452nw, M377dw, M477fdn, M477fdw, M477fnw'},
     {brand:'HP', type:'toner', name:'CF400A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF400A','CF401A','CF402A','CF403A'], compat:'Color LaserJet Pro M252dw, M252n, M274n, M277dw, M277n'},
-    {brand:'HP', type:'toner', name:'CF540A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF540A','CF541A','CF542A','CF543A'], compat:'Color LaserJet Pro M254dw, M254nw, M280nw, M281fdn, M281fdw'},
+    {brand:'HP', type:'toner', name:'CF540A', sku:'203A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF540A','CF541A','CF542A','CF543A'], compat:'Color LaserJet Pro M254dw, M254nw, M280nw, M281fdn, M281fdw'},
     {brand:'HP', type:'toner', name:'149A', sku:'W1490A', compat:'LaserJet Pro 4003dn, 4003dw, MFP 4103fdn, MFP 4103fdw'},
     {brand:'HP', type:'toner', name:'59A', sku:'CF259A', compat:'LaserJet Pro M304a, M404n, M404dn, M404dw, MFP M428dw, M428fdn, M428fdw'},
     {brand:'HP', type:'toner', name:'59X', sku:'CF259X', compat:'LaserJet Pro M304a, M404n, M404dn, M404dw, MFP M428dw, M428fdn, M428fdw'},
@@ -673,17 +673,110 @@
     {brand:'Pantum', type:'toner', name:'PA210', sku:'PA-210', compat:'P2200, P2500, M6500, M6600'},
     {brand:'Pantum', type:'toner', name:'PA260'},
     {brand:'Pantum', type:'toner', name:'PA2310'},
-    {brand:'Pantum', type:'toner', name:'PA5120'}
+    {brand:'Pantum', type:'toner', name:'PA5120'},
+    /* ---------- HP טונרים — תוספת ---------- */
+    {brand:'HP', type:'toner', name:'05X', sku:'CE505X', compat:'LaserJet P2035, P2035n, P2055d, P2055dn'},
+    {brand:'HP', type:'toner', name:'80A', sku:'CF280A', compat:'LaserJet Pro 400 M401a, M401d, M401dn, M401dw, M425dn, M425dw'},
+    {brand:'HP', type:'toner', name:'80X', sku:'CF280X', compat:'LaserJet Pro 400 M401a, M401d, M401dn, M401dw, M425dn, M425dw'},
+    {brand:'HP', type:'toner', name:'35A', sku:'CB435A', compat:'LaserJet P1005, P1006'},
+    {brand:'HP', type:'toner', name:'36A', sku:'CB436A', compat:'LaserJet P1505, P1505n, M1120, M1522'},
+    {brand:'HP', type:'toner', name:'49A', sku:'Q5949A', compat:'LaserJet 1160, 1320, 3390, 3392'},
+    {brand:'HP', type:'toner', name:'53A', sku:'Q7553A', compat:'LaserJet P2014, P2015, M2727'},
+    {brand:'HP', type:'toner', name:'55A', sku:'CE255A', compat:'LaserJet P3015, M525'},
+    {brand:'HP', type:'toner', name:'55X', sku:'CE255X', compat:'LaserJet P3015, M525'},
+    {brand:'HP', type:'toner', name:'83X', sku:'CF283X', compat:'LaserJet Pro M201, M225'},
+    {brand:'HP', type:'toner', name:'30A', sku:'CF230A', compat:'LaserJet Pro M203, M227'},
+    /* ---------- HP טונרים צבעוניים — תוספת ---------- */
+    {brand:'HP', type:'toner', name:'131A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF210A','CF211A','CF212A','CF213A'], compat:'LaserJet Pro 200 Color M251n, M251nw, M276n, M276nw'},
+    {brand:'HP', type:'toner', name:'126A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CE310A','CE311A','CE312A','CE313A'], compat:'LaserJet Pro CP1025, CP1025nw, M175a, M175nw, M275'},
+    {brand:'HP', type:'toner', name:'305A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CE410A','CE411A','CE412A','CE413A'], compat:'LaserJet Pro 300/400 Color M351a, M375nw, M451dn, M451dw, M451nw, M475dn, M475dw'},
+    {brand:'HP', type:'toner', name:'203X', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF540X','CF541X','CF542X','CF543X'], compat:'Color LaserJet Pro M254dw, M254nw, M280nw, M281fdn, M281fdw'},
+    {brand:'HP', type:'toner', name:'207A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['W2210A','W2211A','W2212A','W2213A'], compat:'Color LaserJet Pro M255dw, M282nw, M283fdn, M283fdw'},
+    {brand:'HP', type:'toner', name:'207X', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['W2210X','W2211X','W2212X','W2213X'], compat:'Color LaserJet Pro M255dw, M282nw, M283fdn, M283fdw'},
+    /* ---------- HP דיו — תוספת ---------- */
+    {brand:'HP', type:'ink', name:'650', colors:C2, compat:'DeskJet Ink Advantage 1015, 1515, 2515, 2545, 2645, 3515, 3545, 4515, 4645'},
+    {brand:'HP', type:'ink', name:'950XL / 951XL', colors:C4, vn:['950XL','951XL','951XL','951XL'], compat:'OfficeJet Pro 8100, 8600, 8610, 8620, 251dw, 276dw'},
+    {brand:'HP', type:'ink', name:'934XL / 935XL', colors:C4, vn:['934XL','935XL','935XL','935XL'], compat:'OfficeJet Pro 6230, 6830, 6835'},
+    {brand:'HP', type:'ink', name:'305', colors:C2, compat:'DeskJet 2710, 2720, 2721, 4120, 4130, ENVY 6020, 6030, 6420'},
+    {brand:'HP', type:'ink', name:'305XXL', colors:C2},
+    {brand:'HP', type:'ink', name:'924', colors:C4},
+    {brand:'HP', type:'ink', name:'308', colors:C2},
+    {brand:'HP', type:'ink', name:'308XL', colors:C2},
+    /* ---------- Canon — תוספת ---------- */
+    {brand:'Canon', type:'toner', name:'047', sku:'CRG-047', compat:'LBP112, LBP113w, MF112, MF113w'},
+    {brand:'Canon', type:'toner', name:'051', sku:'CRG-051', compat:'LBP162dw, MF264dw, MF267dw, MF269dw'},
+    {brand:'Canon', type:'toner', name:'051H', sku:'CRG-051H', compat:'LBP162dw, MF264dw, MF267dw, MF269dw'},
+    {brand:'Canon', type:'toner', name:'070', sku:'CRG-070'},
+    {brand:'Canon', type:'toner', name:'071', sku:'CRG-071'},
+    {brand:'Canon', type:'toner', name:'075', sku:'CRG-075'},
+    {brand:'Canon', type:'toner', name:'054', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['054 BK','054 C','054 Y','054 M'], compat:'LBP621Cw, LBP623Cdw, MF641Cw, MF643Cdw, MF645Cx'},
+    {brand:'Canon', type:'toner', name:'045', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['045 BK','045 C','045 Y','045 M'], compat:'LBP611Cn, LBP613Cdw, MF631Cn, MF633Cdw, MF635Cx'},
+    {brand:'Canon', type:'toner', name:'067', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['067 BK','067 C','067 Y','067 M'], compat:'LBP631Cw, LBP633Cdw, MF651Cw, MF655Cdw, MF657Cdw'},
+    {brand:'Canon', type:'ink', name:'PG-510 שחור', sku:'PG-510', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700'},
+    {brand:'Canon', type:'ink', name:'CL-511 צבעוני', sku:'CL-511', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700'},
+    {brand:'Canon', type:'ink', name:'PG-512 שחור', sku:'PG-512', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700'},
+    {brand:'Canon', type:'ink', name:'CL-513 צבעוני', sku:'CL-513', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700'},
+    {brand:'Canon', type:'ink', name:'PG-40 שחור', sku:'PG-40', compat:'PIXMA iP1200, iP1600, iP2200, iP2600, MP150, MP160, MP170, MP450, MX300, MX310'},
+    {brand:'Canon', type:'ink', name:'CL-41 צבעוני', sku:'CL-41', compat:'PIXMA iP1200, iP1600, iP2200, iP2600, MP150, MP160, MP170, MP450, MX300, MX310'},
+    {brand:'Canon', type:'ink', name:'PG-540 שחור', sku:'PG-540', compat:'PIXMA MG2150, MG2250, MG3150, MG3250, MG4150, MG4250, MX375, MX395, MX435, MX455, MX515, MX525, MX535'},
+    {brand:'Canon', type:'ink', name:'CL-541 צבעוני', sku:'CL-541', compat:'PIXMA MG2150, MG2250, MG3150, MG3250, MG4150, MG4250, MX375, MX395, MX435, MX455, MX515, MX525, MX535'},
+    /* ---------- Canon בקבוקי דיו ---------- */
+    {brand:'Canon', type:'bottle', name:'GI-490', colors:C4, compat:'PIXMA G1400, G1410, G2400, G2410, G3400, G3410, G4400, G4410'},
+    {brand:'Canon', type:'bottle', name:'GI-41', sku:'41S', colors:C4, compat:'PIXMA G1420, G2420, G3420'},
+    /* ---------- Epson בקבוקי דיו ---------- */
+    {brand:'Epson', type:'bottle', name:'103', colors:C4},
+    {brand:'Epson', type:'bottle', name:'101', colors:C4},
+    /* ---------- Brother — תוספת ---------- */
+    {brand:'Brother', type:'toner', name:'TN-2130', compat:'HL-2140, HL-2150N, HL-2170W, DCP-7030, DCP-7040, DCP-7045N, MFC-7320, MFC-7440N, MFC-7840W'},
+    {brand:'Brother', type:'toner', name:'TN-241', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TN-241BK','TN-241C','TN-241Y','TN-241M'], compat:'HL-3140CW, HL-3150CDW, HL-3170CDW, DCP-9020CDW, MFC-9140CDN, MFC-9330CDW'},
+    {brand:'Brother', type:'toner', name:'TN-247', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TN-247BK','TN-247C','TN-247Y','TN-247M'], compat:'HL-L3210CW, HL-L3230CDW, HL-L3270CDW, DCP-L3510CDW, DCP-L3550CDW, MFC-L3710CW, MFC-L3730CDN, MFC-L3750CDW, MFC-L3770CDW'},
+    {brand:'Brother', type:'toner', name:'TN-423', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TN-423BK','TN-423C','TN-423Y','TN-423M'], compat:'HL-L8260CDW, HL-L8360CDW, MFC-L8690CDW, MFC-L8900CDW'},
+    {brand:'Brother', type:'drum', name:'DR-3300', compat:'HL-5440D, HL-5450DN, HL-5470DW, HL-6180DW, DCP-8110DN, DCP-8250DN, MFC-8510DN, MFC-8520DN, MFC-8710DW, MFC-8910DW, MFC-8950DW'},
+    {brand:'Brother', type:'drum', name:'DR-3400', compat:'HL-L5000D, HL-L5100DN, HL-L5200DW, HL-L6250DN, DCP-L5500DN, MFC-L5700DN, MFC-L5750DW, MFC-L6800DW, MFC-L6900DW'},
+    {brand:'Xerox', type:'drum', name:'DR-215'},
+    {brand:'Xerox', type:'drum', name:'DR-3215'},
+    {brand:'Xerox', type:'drum', name:'DR-410'},
+    {brand:'Xerox', type:'drum', name:'DR-219'},
+    {brand:'Brother', type:'drum', name:'DR-421CL', compat:'HL-L8260CDW, HL-L8360CDW, MFC-L8690CDW, MFC-L8900CDW'},
+    {brand:'Xerox', type:'drum', name:'DR-235'},
+    {brand:'Brother', type:'ink', name:'LC3211', colors:C4, compat:'DCP-J572DW, DCP-J772DW, DCP-J774DW, MFC-J491DW, MFC-J497DW, MFC-J890DW, MFC-J895DW'},
+    {brand:'Brother', type:'ink', name:'LC3619XL', colors:C4, compat:'MFC-J2330DW, MFC-J2730DW, MFC-J3530DW, MFC-J3930DW'},
+    {brand:'Brother', type:'ink', name:'LC985', colors:C4, compat:'DCP-J125, DCP-J315W, DCP-J515W, MFC-J265W, MFC-J410, MFC-J415W'},
+    {brand:'Brother', type:'ink', name:'LC980', colors:C4, compat:'DCP-145C, DCP-163C, DCP-165C, DCP-167C, MFC-250C, MFC-255CW, MFC-290C'},
+    {brand:'Brother', type:'ink', name:'LC1240', colors:C4, compat:'MFC-J430W, MFC-J625DW, MFC-J825DW, MFC-J835DW'},
+    {brand:'Brother', type:'ink', name:'LC1280XL', colors:C4, compat:'MFC-J5910DW, MFC-J6510DW, MFC-J6710DW, MFC-J6910DW'},
+    /* ---------- Samsung — תוספת ---------- */
+    {brand:'Samsung', type:'toner', name:'101S', sku:'MLT-D101S', compat:'ML-2160, ML-2165, ML-2165W, SCX-3400, SCX-3405, SCX-3405W, SF-760P'},
+    {brand:'Samsung', type:'toner', name:'104S', sku:'MLT-D104S', compat:'ML-1660, ML-1665, ML-1860, ML-1865, SCX-3200, SCX-3205'},
+    {brand:'Samsung', type:'toner', name:'108S', sku:'MLT-D108S', compat:'ML-1640, ML-2240'},
+    {brand:'Samsung', type:'toner', name:'116L', sku:'MLT-D116L', compat:'Xpress SL-M2625, SL-M2675, SL-M2825, SL-M2875, SL-M2885'},
+    {brand:'Samsung', type:'toner', name:'205L', sku:'MLT-D205L', compat:'ML-3310, ML-3710, SCX-4833, SCX-5637'},
+    {brand:'Samsung', type:'toner', name:'CLT-406S', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CLT-K406S','CLT-C406S','CLT-Y406S','CLT-M406S'], compat:'CLP-360, CLP-365, CLP-366, CLX-3300, CLX-3305'},
+    {brand:'Samsung', type:'toner', name:'CLT-504S', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CLT-K504S','CLT-C504S','CLT-Y504S','CLT-M504S'], compat:'CLP-415N, CLP-470, CLP-475, CLX-4195N'},
+    /* ---------- Pantum — תוספת ---------- */
+    {brand:'Pantum', type:'toner', name:'5120X', sku:'TL-5120X', compat:'BP5100DN, BP5100DW, BM5100ADN, BM5100ADW, BM5100FDW'},
+    {brand:'Pantum', type:'toner', name:'CTL-300', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CTL-300K','CTL-300C','CTL-300Y','CTL-300M']},
+    /* ---------- Kyocera ---------- */
+    {brand:'Kyocera', type:'toner', name:'TK-1140', compat:'FS-1035MFP, FS-1135MFP, ECOSYS M2035dn, M2535dn'},
+    {brand:'Kyocera', type:'toner', name:'TK-3060'},
+    {brand:'Kyocera', type:'toner', name:'TK-3130', compat:'FS-4200DN, FS-4300DN, ECOSYS M3550idn, M3560idn'},
+    {brand:'Kyocera', type:'toner', name:'TK-3160'},
+    {brand:'Kyocera', type:'toner', name:'TK-3190', compat:'ECOSYS P3055dn, P3060dn, M3655idn, M3660idn'},
+    {brand:'Kyocera', type:'toner', name:'TK-5270', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TK-5270K','TK-5270C','TK-5270Y','TK-5270M']},
+    {brand:'Kyocera', type:'toner', name:'TK-8335', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TK-8335K','TK-8335C','TK-8335Y','TK-8335M']},
+    /* ---------- Olivetti ---------- */
+    {brand:'Olivetti', type:'toner', name:'1233'},
+    {brand:'Olivetti', type:'toner', name:'1235'}
   ];
   P.forEach(function(p){ if(p.price === undefined) p.price = 0; });
   var PRODUCTS = P;
   var PAGE = 24;
 
-  var BRAND_COLOR = {HP:'#0096D6', Canon:'#DA291C', Brother:'#0075C9', Samsung:'#1428A0', Pantum:'#0E8A7D'};
+  var BRAND_COLOR = {HP:'#0096D6', Canon:'#DA291C', Brother:'#0075C9', Samsung:'#1428A0', Pantum:'#0E8A7D', Kyocera:'#D6001C', Olivetti:'#B0132B', Epson:'#003399', Xerox:'#D3202B'};
   var COLOR_HEX = {'שחור':'#16151A','ציאן':'#00A6E0','מגנטה':'#E6007E','צהוב':'#F7DB04'};
   var COLOR_BG = {'צבעוני':'conic-gradient(#00A6E0 0 33%, #E6007E 0 66%, #F7DB04 0)'};
-  var TYPE_HE = {toner:'טונר', ink:'דיו', drum:'תוף'};
-  var TYPE_SEARCH = {toner:'טונר טונרים toner', ink:'דיו ראש דיו ink', drum:'תוף תופים drum'};
+  var TYPE_HE = {toner:'טונר', ink:'דיו', drum:'תוף', bottle:'בקבוק דיו'};
+  var TYPE_SEARCH = {toner:'טונר טונרים toner', ink:'דיו ראש דיו ink', drum:'תוף תופים drum', bottle:'בקבוק דיו בקבוקי דיו מילוי ink bottle'};
 
   var grid = document.getElementById('catGrid'), q = document.getElementById('catQ'),
       count = document.getElementById('catCount'), empty = document.getElementById('catEmpty'),
@@ -726,6 +819,12 @@
             '<rect x="30" y="64" width="140" height="10" fill="'+c+'"/>' +
             '<rect x="50" y="86" width="100" height="38" rx="5" fill="#fff"/>' +
             '<text x="100" y="113" text-anchor="middle" font-family="Assistant,Arial,sans-serif" font-weight="800" font-size="'+fs(22,18,14)+'" fill="#16151A">'+label+'</text>';
+    } else if(p.type === 'bottle'){
+      svg = '<rect x="84" y="22" width="32" height="22" rx="4" fill="#2B2A30"/>' +
+            '<path d="M80 44h40l12 22v78a10 10 0 01-10 10H78a10 10 0 01-10-10V66z" fill="#2B2A30"/>' +
+            bandRect(68,66,64,16,0) +
+            '<rect x="76" y="92" width="48" height="40" rx="5" fill="#fff"/>' +
+            '<text x="100" y="118" text-anchor="middle" font-family="Assistant,Arial,sans-serif" font-weight="800" font-size="'+(label.length>5?13:18)+'" fill="#16151A">'+label+'</text>';
     } else {
       svg = '<rect x="62" y="34" width="76" height="118" rx="10" fill="#2B2A30"/>' +
             bandRect(62,34,76,16,6) +
@@ -785,8 +884,8 @@
     }
   }
 
-  var DEFS = [['','','הכל'],['type','toner','טונרים'],['type','ink','דיו'],['type','drum','תופים'],
-              ['brand','HP','HP'],['brand','Canon','Canon'],['brand','Brother','Brother'],['brand','Samsung','Samsung'],['brand','Pantum','Pantum']];
+  var DEFS = [['','','הכל'],['type','toner','טונרים'],['type','ink','דיו'],['type','drum','תופים'],['type','bottle','בקבוקי דיו'],
+              ['brand','HP','HP'],['brand','Canon','Canon'],['brand','Brother','Brother'],['brand','Samsung','Samsung'],['brand','Pantum','Pantum'],['brand','Kyocera','Kyocera'],['brand','Olivetti','Olivetti'],['brand','Epson','Epson'],['brand','Xerox','Xerox']];
   function chips(){
     filtersEl.innerHTML = DEFS.map(function(d,i){
       var on = d[0]==='' ? (!state.type && !state.brand) : state[d[0]] === d[1];
