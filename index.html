@@ -849,6 +849,15 @@
     {brand:'Olivetti', type:'toner', name:'1235'}
   ];
   P.forEach(function(p){ if(p.price === undefined) p.price = 0; });
+  /* סדר תצוגה אוטומטי: קודם כל הטונרים, אחר כך הדיו, בקבוקי הדיו והתופים. בתוך כל סוג — לפי מותג.
+     מוצר חדש שמוסיפים בכל מקום ברשימה ייכנס לבד למקום הנכון. */
+  var TYPE_ORDER = {toner:0, ink:1, bottle:2, drum:3};
+  var BRAND_ORDER = ['HP','Canon','Brother','Samsung','Pantum','Kyocera','Olivetti','Xerox','Epson'];
+  P.forEach(function(p, i){ p._o = i; });
+  P.sort(function(a, b){
+    return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) ||
+           (BRAND_ORDER.indexOf(a.brand) - BRAND_ORDER.indexOf(b.brand)) || (a._o - b._o);
+  });
   var PRODUCTS = P;
   var PAGE = 24;
 
