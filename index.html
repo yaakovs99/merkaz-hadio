@@ -329,6 +329,28 @@
   html.a11y-contrast *:not(img):not(svg):not(svg *):not(.hero-img):not(.hero-scrim):not(.promo-photo):not(.pl-img):not(.sw):not(.pcard-img):not(.a11y-widget):not(.a11y-widget *){ background-color: #000 !important; color: #fff !important; border-color: #fff !important; text-shadow: none !important; }
   html.a11y-contrast a:not(.a11y-widget *){ color: #ff0 !important; text-decoration: underline !important; }
   html.a11y-contrast .pcard-img{ background: #fff !important; }
+
+  /* ---------- night urgent service (compact) ---------- */
+  .night{ background: linear-gradient(120deg, #0c0f2e 0%, #1f2566 100%); color:#fff; padding: 12px 0; scroll-margin-top: 70px; border-bottom: 3px solid var(--yellow); }
+  .night-inner{ display:flex; align-items:center; gap: 14px; }
+  .night-moon{ flex: 0 0 auto; width: 38px; height: 38px; }
+  .night-text{ flex: 1 1 auto; min-width: 0; }
+  .night h2{ color:#fff; font-size: 20px; line-height: 1.2; margin: 0; }
+  .night-sub{ color:#cfd3f5; font-size: 14px; margin: 2px 0 0; }
+  .night-sub b{ color: var(--yellow); }
+  .night-cta{ flex: 0 0 auto; display:flex; align-items:center; gap: 14px; }
+  .night-cta .btn-wa{ background:#25D366; color:#fff; justify-content:center; font-size: 16px; padding: 10px 20px; }
+  .night-cta .btn-wa:hover{ background:#1fb858; }
+  .night-call{ color:#cfd3f5; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+  @media (max-width: 780px){
+    .night{ padding: 12px 0 14px; }
+    .night-inner{ flex-wrap: wrap; gap: 10px 12px; }
+    .night-text{ flex: 1 1 calc(100% - 60px); }
+    .night h2{ font-size: 18px; }
+    .night-sub{ font-size: 13px; }
+    .night-cta{ flex: 1 1 100%; justify-content: space-between; }
+    .night-cta .btn-wa{ flex: 1; }
+  }
 </style>
 </head>
 <body>
@@ -369,6 +391,20 @@
 </div>
 
 <div class="cat-strip"><b>מדפסות</b><span>·</span><b>טונרים</b><span>·</span><b>ראשי דיו</b><span>·</span><b>ציוד משרדי</b></div>
+
+<section class="night" id="night" aria-labelledby="nightTitle">
+  <div class="wrap night-inner">
+    <svg class="night-moon" viewBox="0 0 100 100" aria-hidden="true"><path d="M62 10a40 40 0 1 0 28 62A34 34 0 0 1 62 10z" fill="#F7DB04"/><circle cx="82" cy="24" r="3" fill="#fff"/><circle cx="94" cy="44" r="2" fill="#fff"/></svg>
+    <div class="night-text">
+      <h2 id="nightTitle">נגמר הדיו או הטונר באמצע הלילה? יש פתרון</h2>
+      <p class="night-sub">איסוף או משלוח · <b>עד 22:00</b></p>
+    </div>
+    <div class="night-cta">
+      <a class="btn btn-wa" href="https://wa.me/972553009967?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%20%D7%93%D7%99%D7%95/%D7%98%D7%95%D7%A0%D7%A8%20%D7%93%D7%97%D7%95%D7%A3%20%28%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%94%D7%A2%D7%A8%D7%91%29.%20%D7%93%D7%92%D7%9D%20%D7%94%D7%9E%D7%93%D7%A4%D7%A1%D7%AA%20%D7%A9%D7%9C%D7%99%3A%20" target="_blank" rel="noopener" onclick="gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'night_urgent'});"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>כתבו לנו בוואטסאפ</a>
+      <a class="night-call" href="tel:+972553009967" onclick="gtag('event', 'generate_lead', {'event_category': 'phone_call', 'event_label': 'night_urgent_phone'});">או התקשרו</a>
+    </div>
+  </div>
+</section>
 
 <section class="catalog" id="catalog">
   <div class="wrap">
