@@ -1070,6 +1070,14 @@
   אתר זה משתמש בעוגיות (Cookies) ובכלי ניתוח של Google Analytics ו-Google Ads כדי לנתח תנועה ולשפר את חווית המשתמש. 
   <button onclick="document.getElementById('cookie-banner').style.display='none'" style="background: #28a745; color: white; border: none; padding: 5px 15px; margin-right: 10px; cursor: pointer; border-radius: 4px;">מאשר/ת</button>
 </div>
+<script>
+/* מדידת המרות בגוגל אדס: כל לחיצה על קישור וואטסאפ באתר נרשמת כהמרה "וואטסאפ מהאתר" */
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+  if(!a || typeof gtag !== 'function') return;
+  try { gtag('event', 'conversion', {'send_to': 'AW-18458581027/-RlpCIbbtagdEKOw3uFE'}); } catch(err){}
+});
+</script>
 <div class="a11y-widget" id="a11yWidget">
   <button type="button" class="a11y-fab" id="a11yFab" aria-label="אפשרויות נגישות" aria-expanded="false" aria-controls="a11yPanel">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8" fill="currentColor"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M8.5 21l3.5-6 3.5 6"/></svg>
