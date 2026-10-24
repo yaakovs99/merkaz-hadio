@@ -267,6 +267,7 @@
   .pcard h3 bdi{ unicode-bidi: isolate; white-space: nowrap; }
   .pcard-compat{ font-size: 13px; color: var(--ink-soft); line-height: 1.45; margin: 0; }
   .pcard-price{ padding: 8px 14px 12px; font-family:'Suez One', serif; font-size: 26px; }
+  .pcard-price .pp-cur{ font-family:'Assistant',Arial,sans-serif; font-size:.75em; font-weight:700; margin-inline-start:3px; }
   .pcard-price small{ font-family:'Assistant',sans-serif; font-size: 12px; color: var(--ink-soft); font-weight: 600; }
   .pcard .buy{
     display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; font-weight: 800; font-size: 16px;
@@ -976,7 +977,7 @@
 
   function card(p){
     var msg = 'היי, אני מעוניין לרכוש ' + title(p) + (p.sku && p.sku !== p.name ? ' (' + p.sku + ')' : '') + '. אפשר לאשר מחיר וזמינות?';
-    var price = SHOW_PRICES && p.price > 0 ? '<div class="pcard-price">₪' + p.price + ' <small>ליחידה</small></div>' : '';
+    var price = SHOW_PRICES && p.price > 0 ? '<div class="pcard-price"><span class="pp-num" dir="ltr">' + p.price + '<span class="pp-cur">&nbsp;&#8362;</span></span> <small>ליחידה</small></div>' : '';
     var sku = p.sku && p.sku !== dname(p) ? '<bdi dir="ltr">'+esc(p.sku)+'</bdi>' : '';
     var compat = p.compat ? 'מתאים ל: <bdi dir="ltr">'+esc(p.compat)+'</bdi>' : '';
     return '<article class="pcard" data-i="'+p._i+'">' +
