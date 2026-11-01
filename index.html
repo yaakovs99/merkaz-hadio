@@ -385,8 +385,8 @@
   .bs-price{ margin-top:auto; font-family:'Suez One',serif; font-size:26px; line-height:1.1; }
   .bs-price s{ font-family:'Assistant',Arial,sans-serif; font-size:15px; opacity:.55; margin-inline-start:6px; }
   .bs-save{ font-size:13px; font-weight:800; color:#0b7a36; margin:2px 0 8px; min-height:18px; }
-  .bs-go{ display:flex; align-items:center; justify-content:center; gap:6px; background:#25D366; color:#fff; text-decoration:none; font-weight:800; padding:9px 6px; border-radius:8px; font-size:15px; }
-  .bs-single{ display:block; text-align:center; margin-top:16px; padding:15px 12px; background:var(--ink); color:var(--yellow); border-radius:12px; font-weight:800; font-size:19px; text-decoration:none; box-shadow:4px 4px 0 var(--yellow); }
+  .bs-go{ display:flex; align-items:center; justify-content:center; gap:6px; align-self:center; width:78%; background:#25D366; color:#fff; text-decoration:none; font-weight:800; padding:7px 6px; border:2px solid var(--ink); border-radius:8px; font-size:15px; text-shadow:0 1px 0 rgba(0,0,0,.25); }
+  .bs-single{ display:block; text-align:center; margin:0 0 20px; padding:15px 12px; background:var(--ink); color:var(--yellow); border-radius:12px; font-weight:800; font-size:19px; text-decoration:none; box-shadow:4px 4px 0 var(--yellow); }
   @media (max-width:640px){
     .bs-grid{ grid-template-columns:1fr; gap:22px; }
     .bs-offer{ align-items:center; text-align:center; padding:18px 12px 12px; }
@@ -395,8 +395,8 @@
     .bs-pics.gift{ height:auto; padding:6px 0 8px; }
     .bs-pics.gift > *{ transform:scale(1.1); }
     .bs-info{ width:100%; }
-    .bs-go{ width:100%; margin-top:10px; font-size:17px; padding:12px 6px; }
-    .bs-single{ font-size:20px; padding:17px 12px; }
+    .bs-go{ width:70%; margin-top:10px; font-size:16px; padding:8px 6px; }
+    .bs-single{ font-size:20px; padding:17px 12px; margin-bottom:26px; }
   }
 </style>
 </head>
@@ -1097,7 +1097,8 @@
     var hasPrice = SHOW_PRICES && p.price > 0;
     var html = '<button type="button" class="bs-x" aria-label="סגירה">&times;</button>' +
       '<h2>מבצעי מארזים</h2>' +
-      '<p class="bs-sub">קונים יותר וחוסכים, על <bdi dir="ltr">' + esc(p.brand + ' ' + dname(p)) + '</bdi></p><div class="bs-grid">';
+      '<p class="bs-sub">קונים יותר וחוסכים, על <bdi dir="ltr">' + esc(p.brand + ' ' + dname(p)) + '</bdi></p>' +
+      '<a class="bs-single" href="' + waLink('היי, אני מעוניין לרכוש ' + base + '. אפשר לאשר מחיר וזמינות?') + '" target="_blank" rel="noopener">מעוניין ביחידה אחת בלבד? לחץ כאן</a><div class="bs-grid">';
     BUNDLES.forEach(function(b, i){
       var msg = 'היי, אני מעוניין ב' + b.text + ' של ' + base + '. אפשר לאשר מחיר וזמינות?';
       var price = '', save = '';
@@ -1110,8 +1111,7 @@
         '<div class="bs-info"><h3>' + b.name + '</h3><div class="bs-det">' + b.det + '</div>' + price + save + '</div>' +
         '<a class="bs-go" href="' + waLink(msg) + '" target="_blank" rel="noopener">להזמנה בוואטסאפ</a></div>';
     });
-    var single = 'היי, אני מעוניין לרכוש ' + base + '. אפשר לאשר מחיר וזמינות?';
-    html += '</div><a class="bs-single" href="' + waLink(single) + '" target="_blank" rel="noopener">מעוניין ביחידה אחת בלבד? לחץ כאן</a>';
+    html += '</div>';
     bsEl.innerHTML = html;
     bsBack.style.display = ''; bsEl.style.display = '';
     document.body.style.overflow = 'hidden';
