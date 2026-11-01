@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18458581027"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18458581027');
+  gtag('config', 'G-H3K5752KV2');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מרכז הדיו נתניה | מדפסות, טונרים ודיו, ציוד משרדי</title>
+<meta name="description" content="מרכז הדיו נתניה — מדפסות, טונרים, דיו וראשי דיו, ציוד משרדי. משלוחים חינם. מבצע: קונים 4 טונרים ומקבלים 1 מתנה. רח' המחקר 3, נתניה. 0553009967">
+
+<!-- === GTM: הדביקו כאן את קוד ה-Google Tag Manager (Head) לפי שלב 4 בתוכנית === -->
+
+<link rel="preload" as="image" href="images/hero.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #FDFBF4;
+    --paper-2: #FCF3C9;
+    --ink: #16151A;
+    --ink-soft: #514F45;
+    --yellow: #F7DB04;
+    --yellow-deep: #C9AF00;
+    --teal: #1FB88E;
+    --blue: #2AA5D9;
+    --magenta: #ED0F9E;
+    --orange: #F2A71B;
+    --line: rgba(22,21,26,0.14);
+    --radius: 4px;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{ margin:0; background: var(--paper); color: var(--ink); font-family: 'Assistant', sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1,h2,h3{ font-family: 'Suez One', serif; font-weight: 400; line-height: 1.2; margin: 0; }
+  a{ color: inherit; }
+  .wrap{ max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  @media (max-width: 640px){ .wrap{ padding: 0 20px; } }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--blue); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce){ *{ animation: none !important; transition: none !important; } html{ scroll-behavior: auto; } }
+
+  /* ---------- header ---------- */
+  header{ position: sticky; top: 0; z-index: 40; background: var(--ink); border-bottom: 3px solid var(--yellow); }
+  .header-inner{ display:flex; align-items:center; justify-content: space-between; padding: 12px 0; gap: 16px; }
+  .brand-logo img{ height: 46px; display:block; }
+  .header-tagline{ display:none; font-size: 12px; color: #D8D4C4; }
+  @media (min-width: 720px){ .header-tagline{ display:block; } }
+  .header-phone{
+    display:flex; align-items:center; gap:6px; font-weight:800; font-size:16px;
+    text-decoration:none; padding: 10px 18px; border-radius: 999px; background: var(--yellow); color: var(--ink); flex-shrink:0;
+  }
+  .header-phone:hover{ background: #fff; }
+  @media (max-width: 560px){ .header-phone .label{ display:none; } }
+
+  /* ---------- hero ---------- */
+  .hero{ position: relative; min-height: 660px; display:flex; align-items:flex-end; overflow:hidden; }
+  @media (max-width: 780px){ .hero{ min-height: 860px; } }
+  .hero-img{ position:absolute; inset:0; background-image: url('images/hero.webp'); background-size: cover; background-position: center 66%; }
+  .hero-scrim{ position:absolute; inset:0; background: linear-gradient(0deg, rgba(15,13,8,0.95) 0%, rgba(15,13,8,0.55) 20%, rgba(15,13,8,0.12) 42%, rgba(15,13,8,0.02) 62%, rgba(15,13,8,0) 100%); }
+  .ribbon{
+    position:absolute; top: 26px; right: -64px; width: 260px; text-align:center;
+    background: var(--yellow); color: var(--ink); font-weight: 800; font-size: 15px; padding: 8px 0;
+    transform: rotate(45deg); box-shadow: 0 2px 8px rgba(0,0,0,0.25); z-index: 2;
+  }
+  .hero-content{ position:relative; width:100%; padding: 90px 0 40px; color:#FDFBF4; }
+  .badge-stamp{ display:inline-block; background: var(--yellow); color: var(--ink); font-weight: 800; font-size: 15px; padding: 9px 18px; border-radius: 999px; transform: rotate(-3deg); margin-bottom: 22px; }
+  .hero h1{ font-size: clamp(32px, 5.2vw, 52px); max-width: 14ch; color: #FFFFFF; }
+  .hero-sub{ margin: 18px 0 0; max-width: 50ch; font-size: 21px; color: #EFEAD9; }
+  .hero-sub-highlight{
+    background: rgba(0,0,0,0.42); border-right: 4px solid var(--yellow);
+    padding: 14px 18px; border-radius: 6px; display:inline-block;
+  }
+  .hero-sub-highlight strong{ color: var(--yellow); font-weight:800; }
+  .services-promo-link{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    background: var(--ink); border-right: 4px solid var(--yellow);
+    padding: 24px 26px; border-radius: 6px; text-decoration:none; margin-top: 8px;
+  }
+  .services-promo-link:hover{ background:#2a2820; }
+  .services-promo-link span{
+    font-family:'Suez One', serif; font-size: 32px; color: var(--yellow);
+  }
+  .promo-link-arrow{
+    width: 30px; height:30px; color: var(--yellow); flex-shrink:0;
+    animation: promo-arrow-bounce 1.4s ease-in-out infinite;
+  }
+  @keyframes promo-arrow-bounce{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(6px); } }
+  .cta-row{ display:flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; padding: 15px 26px; border-radius: var(--radius); font-weight:700; font-size: 17px; text-decoration:none; border: 1px solid transparent; }
+  .btn-primary{ background: var(--yellow); color: var(--ink); }
+  .btn-primary:hover{ background: #fff; }
+  .btn-secondary{ background: transparent; color: #fff; border-color: #fff; }
+  .btn-secondary:hover{ background: #fff; color: var(--ink); }
+  .hero-meta{ margin-top: 24px; color: #D8D2BE; font-size: 14px; }
+  .hero-meta a{ color:#fff; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---------- brand strip ---------- */
+  .brand-marquee{ background: var(--ink); padding: 16px 20px; text-align:center; }
+  .mq-item{
+    display:inline-flex; align-items:center; flex-wrap:wrap; justify-content:center; gap:6px;
+    color:#fff; font-weight:600; font-size:15px;
+  }
+  .mq-hp{ color:#0096D6; font-weight:800; }
+  .mq-canon{ color:#DA291C; font-weight:800; }
+  .mq-brother{ color:#0075C9; font-weight:800; }
+
+    /* ---------- category strip ---------- */
+  .cat-strip{ background: var(--ink); color: #fff; padding: 14px 0; font-size: 14px; text-align:center; }
+  .cat-strip span{ margin: 0 10px; }
+  .cat-strip b{ color: var(--yellow); }
+
+  /* ---------- services ---------- */
+  .services{ padding: 60px 0; border-top: 1px solid var(--line); }
+  .section-lead{ max-width: 56ch; font-size: 20px; color: var(--ink-soft); margin: 0 0 40px; }
+  .service-list{ display:grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+  @media (max-width: 780px){ .service-list{ grid-template-columns: 1fr; } }
+  .service{ padding: 30px 26px 30px 0; border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .service:first-child{ padding-right: 0; }
+  @media (max-width: 780px){ .service{ border-left: none; padding: 26px 0; } }
+  .blot{ width: 20px; height: 20px; border-radius: 50%; margin-bottom: 16px; }
+  .blot.t{ background: var(--teal); }
+  .blot.m{ background: var(--magenta); }
+  .blot.b{ background: var(--blue); }
+  .service h3{ font-size: 22px; margin-bottom: 10px; }
+  .service p{ color: var(--ink-soft); margin: 0; font-size: 16px; }
+
+  /* ---------- promo (real offer) ---------- */
+  .promo{ padding: 60px 0; border-top: 1px solid var(--line); background: var(--paper-2); }
+  .promo-cards{ display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 900px){ .promo-cards{ grid-template-columns: 1fr; } }
+  .promo-cards .promo-card{ grid-template-columns: 1fr; }
+  .promo-card{ display:grid; grid-template-columns: 1fr 1fr; gap:0; background: var(--ink); border-radius: 10px; overflow:hidden; }
+  @media (max-width: 780px){ .promo-card{ grid-template-columns: 1fr; } }
+  .promo-photo{ background-image:url('images/promo-toner.webp'); background-size:cover; background-position:center; min-height: 260px; position:relative; }
+  .promo-photo-placeholder{ background-image:none; background: var(--paper-2); border-bottom: 2px dashed var(--line); min-height: 200px; display:flex; align-items:center; justify-content:center; text-align:center; padding: 16px; }
+  .promo-placeholder-text{ color: var(--ink-soft); font-size: 13px; }
+  .promo-photo-contain{ background-size: contain !important; background-repeat: no-repeat; background-color: #fff; }
+  .promo-card-wide{ margin-top: 24px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 780px){ .promo-card-wide{ grid-template-columns: 1fr; } }
+  .promo-card-wide .promo-photo{ min-height: 280px; }
+  .promo-badge{ position:absolute; top:18px; left:18px; width: 112px; height:112px; border-radius:50%; background: var(--yellow); color: var(--ink); display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'Suez One', serif; line-height:1; transform: rotate(-10deg); border: 3px solid var(--ink); box-shadow: 0 8px 20px rgba(0,0,0,0.35); z-index:2; }
+  .promo-badge .num{ font-size: 34px; }
+  .promo-badge .txt{ font-size: 13px; font-weight:800; font-family:'Assistant',sans-serif; margin-top:2px; }
+  .promo-text{ padding: 40px 36px; color: #fff; display:flex; flex-direction:column; justify-content:center; }
+  .promo-tag{ display:inline-block; background: var(--yellow); color: var(--ink); font-weight:800; font-size:13px; padding: 6px 14px; border-radius: 999px; margin-bottom:16px; width:fit-content; }
+  .promo-text h2{ color:#fff; font-size: 30px; margin-bottom: 12px; }
+  .promo-text p{ color:#D8D2BE; font-size:16px; margin: 0 0 22px; }
+
+  /* ---------- why us ---------- */
+  .pricelist{ padding: 50px 0 60px; border-top: 1px solid var(--line); }
+  .pricelist-track{
+    display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory;
+    padding-bottom:10px; -webkit-overflow-scrolling:touch;
+  }
+  .pricelist-track::-webkit-scrollbar{ height:6px; }
+  .pricelist-track::-webkit-scrollbar-thumb{ background: var(--line); border-radius:3px; }
+  .pl-card{
+    flex: 0 0 220px; scroll-snap-align:start;
+    background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden;
+  }
+  .pl-img{
+    width:100%; aspect-ratio:1/1; background-size:contain; background-repeat:no-repeat;
+    background-position:center; background-color:#fff; padding:10px; box-sizing:border-box;
+  }
+  .pl-price{
+    background: var(--yellow); color: var(--ink); text-align:center; font-weight:800;
+    padding: 12px 10px; font-size:15px;
+  }
+    .how{ padding: 56px 0; border-top: 1px solid var(--line); text-align:center; }
+  .how h2{ font-size: 30px; margin-bottom: 32px; }
+  .how-steps{ display:flex; flex-direction:column; align-items:center; gap: 10px; max-width: 420px; margin: 0 auto; }
+  .how-step{ display:flex; align-items:center; gap: 14px; width:100%; }
+  .how-num{
+    width: 44px; height:44px; border-radius:50%; background: var(--yellow); color: var(--ink);
+    display:flex; align-items:center; justify-content:center; font-family:'Suez One', serif;
+    font-size: 20px; flex-shrink:0;
+  }
+  .how-text{ font-size: 18px; font-weight:700; text-align:right; }
+  .how-arrow{ font-size: 24px; color: var(--yellow-deep); line-height:1; }
+    .why{ padding: 60px 0; border-top: 1px solid var(--line); }
+  .why-grid{ display:grid; grid-template-columns: 0.8fr 1.2fr; gap: 44px; }
+  @media (max-width: 780px){ .why-grid{ grid-template-columns: 1fr; gap: 26px; } }
+  .why h2{ font-size: 30px; max-width: 10ch; }
+  .why-points{ list-style: none; margin:0; padding:0; display:flex; flex-direction: column; }
+  .why-points li{ padding: 18px 0; border-top: 1px solid var(--line); display:flex; gap: 16px; font-size: 17px; }
+  .why-points li:last-child{ border-bottom: 1px solid var(--line); }
+  .why-points strong{ font-family:'Suez One', serif; font-weight:400; min-width: 6.5ch; color: var(--yellow-deep); }
+
+  /* ---------- location ---------- */
+  .location{ padding: 60px 0 40px; border-top: 1px solid var(--line); }
+  .loc-grid{ display:grid; grid-template-columns: 1fr; gap: 44px; max-width: 560px; }
+  @media (max-width: 780px){ .loc-grid{ grid-template-columns: 1fr; gap: 30px; } }
+  .loc-card h2{ font-size: 28px; margin-bottom: 18px; }
+  .loc-row{ display:flex; justify-content: space-between; align-items: baseline; padding: 15px 0; border-top: 1px solid var(--line); font-size: 16px; gap: 12px; }
+  .loc-row:last-child{ border-bottom: 1px solid var(--line); }
+  .loc-row .k{ color: var(--ink-soft); flex-shrink:0; display:flex; align-items:center; gap:8px; }
+  .ic{ width:18px; height:18px; flex-shrink:0; }
+  .ic-wa{ color:#25D366; }
+  .ic-wa-badge{ width:24px; height:24px; flex-shrink:0; border-radius:6px; }
+  .loc-row .v{ font-weight: 700; text-align:left; }
+  .loc-row a.v{ text-decoration: underline; text-underline-offset: 3px; }
+  .hours-note{ margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+
+  /* ---------- rainbow bar + footer ---------- */
+  .rainbow-bar{ height: 8px; background: linear-gradient(90deg, var(--teal), var(--blue), var(--magenta), var(--orange)); }
+  footer{ padding: 22px 0 96px; font-size: 14px; color: var(--ink-soft); display:flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  footer img{ height: 22px; opacity: 0.8; }
+  @media (max-width: 780px){ footer{ padding-bottom: 110px; } }
+
+  /* ---------- sticky mobile CTA ---------- */
+  .mobile-cta{ position: fixed; bottom: 0; right:0; left:0; display:none; z-index: 50; border-top: 1px solid var(--line); background: var(--paper); }
+  .mobile-cta-inner{ display:grid; grid-template-columns: 1fr 1fr; }
+  .mobile-cta a{ display:flex; align-items:center; justify-content:center; gap:7px; padding: 16px 8px; font-weight: 700; text-decoration:none; font-size: 16px; }
+  .mobile-cta .call{ background: var(--ink); color: var(--yellow); }
+  .mobile-cta .wa{ background: #25D366; color: #fff; }
+  @media (max-width: 780px){ .mobile-cta{ display:block; } }
+
+  /* ---------- promo popup ---------- */
+  .modal-overlay{ position: fixed; inset:0; background: rgba(15,13,8,0.6); display:none; align-items:center; justify-content:center; z-index: 100; padding: 20px; }
+  .modal-overlay.open{ display:flex; }
+  .modal{ background: var(--ink); border-radius: 10px; max-width: 620px; width:100%; position:relative; max-height: 90vh; overflow:auto; border: 3px solid var(--yellow); }
+  .modal-photo{ background-image:url('images/promo-toner.webp'); background-size:cover; background-position:center; height: 200px; }
+  .modal-body{ padding: 28px 30px 32px; color:#fff; }
+  .modal-close{ position:absolute; top:14px; left:14px; width: 34px; height:34px; border-radius:50%; background: var(--yellow); color: var(--ink); border:none; cursor:pointer; font-size: 18px; line-height:1; z-index:2; }
+  .modal-tag{ display:inline-block; background: var(--yellow); color: var(--ink); font-weight:800; font-size:13px; padding: 6px 14px; border-radius: 999px; margin-bottom:14px; }
+  .modal h2{ color:#fff; font-size: 26px; margin-bottom: 8px; }
+  .modal p.modal-sub{ color:#D8D2BE; margin: 0 0 22px; font-size: 15px; }
+
+  /* ---------- catalog (search + products) ---------- */
+  .catalog{ padding: 56px 0 60px; border-top: 1px solid var(--line); background: #fff; }
+  .catalog h2{ font-size: 30px; margin-bottom: 8px; }
+  .catalog .cat-lead{ color: var(--ink-soft); margin: 0 0 22px; font-size: 18px; }
+  .sr-only{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .catalog .services-promo-link{ margin: 0 0 30px; }
+  .cat-lead bdi{ white-space: nowrap; }
+  .cat-search{ position: relative; max-width: 640px; }
+  .cat-search input{
+    width:100%; font: inherit; font-size: 18px; padding: 16px 52px 16px 16px; border: 2px solid var(--ink);
+    border-radius: var(--radius); background: var(--paper); color: var(--ink);
+  }
+  .cat-search input:focus{ outline: 3px solid var(--yellow); outline-offset: 0; }
+  .cat-search svg{ position:absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; color: var(--ink-soft); pointer-events:none; }
+  .cat-filters{ display:flex; flex-wrap:wrap; gap: 8px; margin: 16px 0 6px; }
+  .chip{
+    font: inherit; font-size: 15px; font-weight: 700; padding: 7px 16px; border-radius: 999px; cursor: pointer;
+    background: var(--paper); color: var(--ink); border: 1px solid var(--line);
+  }
+  .chip[aria-pressed="true"]{ background: var(--ink); color: var(--yellow); border-color: var(--ink); }
+  .cat-count{ font-size: 14px; color: var(--ink-soft); margin: 10px 0 18px; min-height: 22px; }
+  .cat-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+  @media (max-width: 560px){ .cat-grid{ grid-template-columns: 1fr 1fr; gap: 12px; } }
+  .pcard{ display:flex; flex-direction:column; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; overflow:hidden; }
+  .pcard-img{ background:#fff; padding: 10px; border-bottom: 1px solid var(--line); }
+  .pcard-img svg{ width:100%; height:auto; display:block; }
+  .pcard-body{ padding: 14px 14px 6px; flex:1; }
+  .pcard-brand{ display:inline-block; font-size: 12px; font-weight: 800; color:#fff; padding: 2px 10px; border-radius: 999px; margin-bottom: 8px; }
+  .pcard h3{ font-family:'Assistant',sans-serif; font-weight: 800; font-size: 17px; line-height: 1.3; margin: 0 0 6px; }
+  .pcard h3 bdi{ unicode-bidi: isolate; white-space: nowrap; }
+  .pcard-compat{ font-size: 13px; color: var(--ink-soft); line-height: 1.45; margin: 0; }
+  .pcard-price{ padding: 8px 14px 12px; font-family:'Suez One', serif; font-size: 26px; }
+  .pcard-price small{ font-family:'Assistant',sans-serif; font-size: 12px; color: var(--ink-soft); font-weight: 600; }
+  .pcard .buy{
+    display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; font-weight: 800; font-size: 16px;
+    background:#25D366; color:#fff; padding: 13px 8px; margin-top: auto;
+  }
+  .pcard .buy:hover{ background:#1ebe5b; }
+  .cat-empty{ display:none; text-align:center; padding: 30px 10px; border: 2px dashed var(--line); border-radius: 10px; background: var(--paper); }
+  .cat-empty p{ margin: 0 0 16px; font-size: 18px; font-weight: 700; }
+  .cat-note{ font-size: 13px; color: var(--ink-soft); margin: 20px 0 0; }
+  .cat-more{ text-align:center; margin: 22px 0 8px; }
+  .cat-more .chip{ font-size: 16px; padding: 12px 28px; background: var(--ink); color: var(--yellow); border-color: var(--ink); }
+  .swatches{ display:flex; align-items:center; gap: 7px; margin: 2px 0 8px; flex-wrap: wrap; }
+  .sw{ width: 24px; height: 24px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); cursor: pointer; padding: 0; }
+  .sw[aria-pressed="true"]{ box-shadow: 0 0 0 2px var(--ink); }
+  .sw-name{ font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<!-- === GTM: הדביקו כאן את קוד ה-Google Tag Manager (Body, מיד אחרי תג הפתיחה) === -->
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand-logo"><img src="images/logo.webp" alt="מרכז הדיו נתניה" width="131" height="46" fetchpriority="high"></div>
+    <span class="header-tagline">מדפסות · טונרים · ראשי דיו · ציוד משרדי</span>
+    <a class="header-phone" href="tel:+972553009967"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.8 3 4.2 3.4 3.8 4 3.8h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="label">התקשרו:</span> 055-3009967</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-scrim"></div>
+  <div class="ribbon">משלוחים חינם!</div>
+  <div class="wrap hero-content">
+    <span class="badge-stamp">מבצע: קונים 4 טונרים · מקבלים 1 מתנה</span>
+    <h1>נגמר הטונר? אנחנו מביאים לך חדש עוד היום</h1>
+    <p class="hero-sub hero-sub-highlight">
+      שלחו לנו את דגם המדפסת ונמצא לכם את <strong>הטונר או הדיו המתאים</strong> ב<strong>מחיר מעולה</strong>.
+    </p>
+    <div class="cta-row">
+<a class="btn btn-primary" href="tel:+972553009967" onclick="gtag('event', 'generate_lead', {'event_category': 'phone_call', 'event_label': 'hero_phone'});"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> להתקשר עכשיו</a>
+  <a href="https://wa.me/972553009967" class="btn btn-whatsapp" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #25D366; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; min-width: 24px; flex-shrink: 0;">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.842-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+    <span>שלח הודעה בוואטסאפ</span>
+</a>
+  </div>
+</section>
+
+<div class="brand-marquee">
+  <span class="mq-item">טונרים ודיו מקוריים ותואמים למדפסות <b class="mq-hp">HP</b> · <b class="mq-canon">Canon</b> · <b class="mq-brother">Brother</b> ועוד.</span>
+</div>
+
+<div class="cat-strip"><b>מדפסות</b><span>·</span><b>טונרים</b><span>·</span><b>ראשי דיו</b><span>·</span><b>ציוד משרדי</b></div>
+
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <a class="services-promo-link" href="#promo" onclick="event.preventDefault(); document.getElementById('promo').scrollIntoView({behavior:'smooth', block:'start'});">
+      <span>המבצעים שלנו</span>
+      <svg class="promo-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+    <h2>מצאו את הטונר או הדיו שלכם</h2>
+    <p class="cat-lead">הקלידו דגם טונר, דיו או מדפסת, למשל <bdi dir="ltr">TN-2420</bdi> או <bdi dir="ltr">M1132</bdi>.</p>
+    <div class="cat-search">
+      <label for="catQ" class="sr-only">חיפוש דגם</label>
+      <input id="catQ" type="search" inputmode="search" autocomplete="off" placeholder="חיפוש לפי דגם טונר, דיו או מדפסת">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    </div>
+    <div class="cat-filters" id="catFilters" role="group" aria-label="סינון"></div>
+    <div class="cat-count" id="catCount" aria-live="polite"></div>
+    <div class="cat-grid" id="catGrid"></div>
+    <div class="cat-more" id="catMore" style="display:none"><button type="button" class="chip" id="catMoreBtn">הצג עוד מוצרים</button></div>
+    <div class="cat-empty" id="catEmpty">
+      <p>לא מצאתם את הדגם? שלחו לנו אותו ונבדוק עבורכם.</p>
+      <a class="btn btn-primary" id="catEmptyBtn" href="#" target="_blank" rel="noopener" style="background:#25D366;color:#fff">שלחו לנו את הדגם בוואטסאפ</a>
+    </div>
+    <p class="cat-note">המחיר והזמינות מאושרים בוואטסאפ לפני ההזמנה. התמונות להמחשה בלבד.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="section-lead">שלושה שירותים מרכזיים, חנות אחת — לא צריך לרוץ בין ספקים כשהמדפסת מפסיקה לעבוד.</p>
+    <div class="service-list">
+      <div class="service">
+        <div class="blot t"></div>
+        <h3>טונרים, דיו וראשי דיו</h3>
+        <p>מכירה ומילוי טונרים לכל דגמי המדפסות, לצד מגוון דיו וראשי דיו מקוריים ותחליפיים — במחיר משתלם ומלאי זמין.</p>
+      </div>
+      <div class="service">
+        <div class="blot m"></div>
+        <h3>מכירת מדפסות</h3>
+        <p>מדפסות בהתאמה לצורך שלכם — לבית, למשרד או לעסק, עם ייעוץ אישי על הדגם והעלות התפעולית לפני שקונים.</p>
+      </div>
+      <div class="service">
+        <div class="blot b"></div>
+        <h3>תיקון מדפסות</h3>
+        <p>חסימות נייר, ראש הדפסה סתום, קווים בהדפסה ותקלות חיבור — מאבחנים ומתקנים במקום, בלי לשלוח למעבדה חיצונית ולחכות שבועות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promo" id="promo">
+  <div class="wrap">
+    <div class="promo-cards">
+      <div class="promo-card">
+        <div class="promo-photo" role="img" aria-label="החלפת טונר במדפסת"></div>
+        <div class="promo-text">
+          <span class="promo-tag">מבצע השבוע</span>
+          <h2>קונים 4 טונרים — ומקבלים 1 מתנה!</h2>
+          <p>המבצע בתוקף בחנות ברח' המחקר 3, נתניה. אפשר לערב בין סוגי טונרים שונים. מתאים למשרדים ולעסקים שרוצים למלא מלאי לתקופה.</p>
+          <a class="btn btn-primary" href="https://wa.me/972553009967?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%91%D7%A6%D7%A2%20%D7%A9%D7%9C%204%2B1" onclick="gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'deal_1'});" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>עבור המבצע לחץ כאן</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="promo-photo promo-photo-contain" data-bg="images/promo-discount.webp" role="img" aria-label="שני טונרים תואמים 145A">
+          <span class="promo-badge"><span class="num">20%</span><span class="txt">הנחה</span></span>
+        </div>
+        <div class="promo-text">
+          <span class="promo-tag">מבצע נוסף</span>
+          <h2>קנה טונר אחד — והשני ב-20% הנחה</h2>
+          <p>אפשר לערב בין סוגי טונרים שונים.</p>
+          <a class="btn btn-primary" href="https://wa.me/972553009967?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%91%D7%95%D7%A8%20%D7%94%D7%9E%D7%91%D7%A6%D7%A2%20%D7%98%D7%95%D7%A0%D7%A8%20%D7%A9%D7%A0%D7%99%20%D7%91-20%25%20%D7%94%D7%A0%D7%97%D7%94" onclick="gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'deal_2'});" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>עבור המבצע לחץ כאן</a>
+        </div>
+      </div>
+    </div>
+    <div class="promo-card promo-card-wide">
+      <div class="promo-photo" data-bg="images/promo-office.webp" role="img" aria-label="מדפי ציוד משרדי במחסן"></div>
+      <div class="promo-text">
+        <span class="promo-tag">קטגוריה</span>
+        <h2>כל ציוד המשרדי שהעסק שלך צריך</h2>
+        <p>נייר צילום למדפסת, קלסרים ותיקיות, עטים וכלי כתיבה, מחשבונים ועוד מוצרי משרד — הכל במלאי, עם משלוח חינם עד אליכם.</p>
+        <a class="btn btn-primary" href="https://wa.me/972553009967?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%A8%D7%9B%D7%95%D7%A9%20%D7%A6%D7%99%D7%95%D7%93%20%D7%9E%D7%A9%D7%A8%D7%93%D7%99" onclick="gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'deal_3'});" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>לבירור מלאי לחץ כאן</a>
+      </div>
+    </div>
+    <div class="promo-card promo-card-wide">
+      <div class="promo-photo" data-bg="images/promo-repair.webp" role="img" aria-label="תיקון מדפסת בסדנה"></div>
+      <div class="promo-text">
+        <span class="promo-tag">שירות</span>
+        <h2>תיקון מדפסות</h2>
+        <p>ניתן לברר אצלנו פרטים לגבי תיקון מדפסות — מוזמנים להתקשר או לשלוח הודעה עם התקלה ונחזור אליכם עם הפרטים.</p>
+        <a class="btn btn-primary" href="https://wa.me/972553009967?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%AA%D7%99%D7%A7%D7%95%D7%9F%20%D7%9C%D7%9E%D7%93%D7%A4%D7%A1%D7%AA%20%D7%A9%D7%9C%D7%99" onclick="gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'deal_4'});" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>לבירור עבור תיקון לחץ כאן</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricelist">
+  <div class="wrap">
+    <p class="section-lead">כמה זה עולה?</p>
+    <div class="pricelist-track">
+      <div class="pl-card">
+        <div class="pl-img" data-bg="images/price-1.webp"></div>
+        <div class="pl-price">טונר החל מ-65 ₪</div>
+      </div>
+      <div class="pl-card">
+        <div class="pl-img" data-bg="images/price-2.webp"></div>
+        <div class="pl-price">ראש דיו החל מ-20 ₪</div>
+      </div>
+      <div class="pl-card">
+        <div class="pl-img" data-bg="images/price-3.webp"></div>
+        <div class="pl-price">מדפסות הזרקת דיו החל מ-290 ₪</div>
+      </div>
+      <div class="pl-card">
+        <div class="pl-img" data-bg="images/price-4.webp"></div>
+        <div class="pl-price">מדפסות לייזר החל ממחיר 540 ₪</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>איך זה עובד?</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <span class="how-num">1</span>
+        <span class="how-text">שולחים את דגם המדפסת</span>
+      </div>
+      <div class="how-arrow">↓</div>
+      <div class="how-step">
+        <span class="how-num">2</span>
+        <span class="how-text">מקבלים מחיר</span>
+      </div>
+      <div class="how-arrow">↓</div>
+      <div class="how-step">
+        <span class="how-num">3</span>
+        <span class="how-text">הטונר מגיע אליכם</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <h2>למה אצלנו</h2>
+    <ul class="why-points">
+      <li><strong>חיסכון</strong><span>טונר ודיו במחיר משתלם משמעותית ממארז חדש ומקורי — בלי פשרה על איכות ההדפסה.</span></li>
+      <li><strong>מקומי</strong><span>חנות פיזית בנתניה, ומשלוח חינם באותו היום — בלי לשלוח בדואר ולחכות ימים.</span></li>
+      <li><strong>ליווי</strong><span>לא בטוחים מה בדיוק צריך? שולחים תמונה בוואטסאפ או מתקשרים, ומקבלים תשובה מהירה וברורה.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="wrap loc-grid">
+    <div class="loc-card">
+      <h2>איך מגיעים</h2>
+      <div class="loc-row"><span class="k"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>כתובת</span><a class="v" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener">המחקר 3, נתניה</a></div>
+      <div class="loc-row"><span class="k"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.8 3 4.2 3.4 3.8 4 3.8h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>טלפון</span><a class="v" href="tel:+972553009967">055-3009967</a></div>
+      <div class="loc-row"><span class="k"><svg class="ic ic-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>וואטסאפ</span><a class="v" href="https://wa.me/972553009967" target="_blank" rel="noopener">שליחת הודעה</a></div>
+      <div class="loc-row"><span class="k"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>מייל</span><a class="v" href="mailto:centrl.dio@gmail.com">centrl.dio@gmail.com</a></div>
+      <div class="loc-row"><span class="k"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="13" height="9" rx="1"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>משלוח</span><span class="v">חינם, מהיום להיום</span></div>
+      <div class="loc-row"><span class="k"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>שעות פתיחה</span><span class="v">א'–ה' 9:00–17:00</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="rainbow-bar"></div>
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; width:100%;">
+    <img src="images/logo.webp" alt="מרכז הדיו נתניה" width="63" height="22" loading="lazy">
+    <span>המחקר 3, נתניה · 055-3009967 · centrl.dio@gmail.com</span>
+    <span>© 2018</span>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <div class="mobile-cta-inner">
+    <a class="wa" href="https://wa.me/972553009967?text=%D7%94%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%9E%D7%99%D7%93%D7%A2%20%D7%A2%D7%9C%20%D7%93%D7%99%D7%95%20%D7%9C%D7%93%D7%92%D7%9D%20%3A" target="_blank" rel="noopener"><svg class="ic-wa-badge ic-wa-badge-inverse" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#fff"/><path fill="#25D366" d="M16 6c-5.5 0-10 4.5-10 10 0 1.8.5 3.5 1.3 5L6 26l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S21.5 6 16 6zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.8-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.2-8.1 8.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/></svg>וואטסאפ</a>
+    <a class="call" href="tel:+972553009967"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.8 3 4.2 3.4 3.8 4 3.8h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>התקשרו עכשיו</a>
+  </div>
+</div>
+
+<div class="modal-overlay" id="promoModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="promoModalTitle">
+    <button class="modal-close" id="promoModalClose" aria-label="סגירה">×</button>
+    <div class="modal-photo" role="img" aria-label="החלפת טונר במדפסת"></div>
+    <div class="modal-body">
+      <span class="modal-tag">מבצע השבוע</span>
+      <h2 id="promoModalTitle">קונים 4 טונרים — ומקבלים 1 מתנה!</h2>
+      <p class="modal-sub">מרכז הדיו נתניה · רח' המחקר 3 · משלוח חינם מהיום להיום</p>
+      <a class="btn btn-primary" style="width:100%; justify-content:center;" href="tel:+972553009967,,"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.8 3 4.2 3.4 3.8 4 3.8h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>התקשרו עכשיו</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var overlay = document.getElementById('promoModal');
+    var closeBtn = document.getElementById('promoModalClose');
+    var SHOWN_KEY = 'promoModalShown';
+    if(!sessionStorage.getItem(SHOWN_KEY)){
+      setTimeout(function(){
+        overlay.classList.add('open');
+        sessionStorage.setItem(SHOWN_KEY, '1');
+      }, 1200);
+    }
+    function closeModal(){ overlay.classList.remove('open'); }
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+  })();
+</script>
+<script>
+(function(){
+  var WA = '972553009967';
+  /* ===== רשימת המוצרים — כאן מוסיפים ומעדכנים מוצרים =====
+     brand: HP / Canon / Brother / Samsung / Pantum
+     type: 'toner' (טונר) | 'ink' (דיו) | 'drum' (תוף)
+     name: שם הדגם | sku: מק"ט (לא חובה) | compat: מדפסות תואמות (אפשר להשאיר ריק)
+     colors: רשימת צבעים לבחירה בתוך אותו כרטיס (לא חובה) | vn: שם דגם לכל צבע (לא חובה)
+     price: מחיר בש"ח. 0 = לא מציגים מחיר. */
+  var C4 = ['שחור','ציאן','מגנטה','צהוב'], C2 = ['שחור','צבעוני'];
+  var P = [
+    /* ---------- HP טונרים ---------- */
+    {brand:'HP', type:'toner', name:'85A', sku:'CE285A', compat:'LaserJet P1102, P1102w, M1132, M1212nf, M1217nfw'},
+    {brand:'HP', type:'toner', name:'83A', sku:'CF283A', compat:'LaserJet Pro M125, M127fn, M201, M225'},
+    {brand:'HP', type:'toner', name:'78A', sku:'CE278A', compat:'LaserJet P1566, P1606dn, M1536dnf'},
+    {brand:'HP', type:'toner', name:'12A', sku:'Q2612A', compat:'LaserJet 1010, 1012, 1015, 1018, 1020, 3015'},
+    {brand:'HP', type:'toner', name:'26A', sku:'CF226A', compat:'LaserJet Pro M402, M426'},
+    {brand:'HP', type:'toner', name:'26X', sku:'CF226X', compat:'LaserJet Pro M402, M426'},
+    {brand:'HP', type:'toner', name:'17A', sku:'CF217A', compat:'LaserJet Pro M102, M130'},
+    {brand:'HP', type:'toner', name:'05A', sku:'CE505A', compat:'LaserJet P2035, P2055'},
+    {brand:'HP', type:'toner', name:'CF410A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF410A','CF411A','CF412A','CF413A'], compat:'Color LaserJet Pro M452dn, M452dw, M452nw, M377dw, M477fdn, M477fdw, M477fnw'},
+    {brand:'HP', type:'toner', name:'CF400A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF400A','CF401A','CF402A','CF403A'], compat:'Color LaserJet Pro M252dw, M252n, M274n, M277dw, M277n'},
+    {brand:'HP', type:'toner', name:'CF540A', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CF540A','CF541A','CF542A','CF543A'], compat:'Color LaserJet Pro M254dw, M254nw, M280nw, M281fdn, M281fdw'},
+    {brand:'HP', type:'toner', name:'149A', sku:'W1490A', compat:'LaserJet Pro 4003dn, 4003dw, MFP 4103fdn, MFP 4103fdw'},
+    {brand:'HP', type:'toner', name:'59A', sku:'CF259A', compat:'LaserJet Pro M304a, M404n, M404dn, M404dw, MFP M428dw, M428fdn, M428fdw'},
+    {brand:'HP', type:'toner', name:'59X', sku:'CF259X', compat:'LaserJet Pro M304a, M404n, M404dn, M404dw, MFP M428dw, M428fdn, M428fdw'},
+    {brand:'HP', type:'toner', name:'106A', sku:'W1106A', compat:'Laser 107a, 107w, MFP 135a, 135w, 137fnw'},
+    {brand:'HP', type:'toner', name:'106X'},
+    {brand:'HP', type:'toner', name:'142A', sku:'W1420A', compat:'LaserJet M110w, M140w'},
+    {brand:'HP', type:'toner', name:'135X', sku:'W1350X', compat:'LaserJet M209dw, M234dw, M234sdw'},
+    {brand:'HP', type:'toner', name:'30X', sku:'CF230X', compat:'LaserJet Pro M203d, M203dn, M203dw, MFP M227fdn, M227fdw, M227sdn'},
+    {brand:'HP', type:'toner', name:'44A', sku:'CF244A', compat:'LaserJet Pro M15, M16, MFP M28, M29'},
+    /* ---------- HP דיו ---------- */
+    {brand:'HP', type:'ink', name:'652', sku:'F6V25AE', colors:C2, compat:'DeskJet Ink Advantage 1115, 2135, 3635, 4535'},
+    {brand:'HP', type:'ink', name:'652XL', colors:C2, compat:'DeskJet Ink Advantage 1115, 2135, 3635, 4535'},
+    {brand:'HP', type:'ink', name:'305XL', colors:C2, compat:'DeskJet 2710, 2720, 2721, 4120, 4130, ENVY 6020, 6030, 6420'},
+    {brand:'HP', type:'ink', name:'953XL', colors:C4, compat:'OfficeJet Pro 7740, 8210, 8218, 8710, 8720, 8730'},
+    {brand:'HP', type:'ink', name:'912XL', colors:C4, compat:'OfficeJet Pro 8010, 8012, 8014, 8020, 8022, 8023, 8025'},
+    {brand:'HP', type:'ink', name:'963', colors:C4, compat:'OfficeJet Pro 9010, 9012, 9014, 9020, 9022, 9025'},
+    {brand:'HP', type:'ink', name:'924E', colors:C4},
+    {brand:'HP', type:'ink', name:'903XL', colors:C4, compat:'OfficeJet Pro 6950, 6960, 6970'},
+    /* ---------- Canon ---------- */
+    {brand:'Canon', type:'toner', name:'725', sku:'CRG-725', compat:'LBP6000, LBP6020, LBP6030, MF3010'},
+    {brand:'Canon', type:'toner', name:'737', sku:'CRG-737', compat:'MF211, MF212w, MF216n, MF226dn, MF229dw, MF244dw'},
+    {brand:'Canon', type:'toner', name:'728', sku:'CRG-728', compat:'MF4410, MF4450, MF4550d, MF4570dn'},
+    {brand:'Canon', type:'toner', name:'719', sku:'CRG-719', compat:'LBP6300, LBP6650, MF5840, MF5880'},
+    {brand:'Canon', type:'ink', name:'PG-545 שחור', sku:'PG-545', compat:'PIXMA MG2450, MG2550, MX495, TS3150, TS3151'},
+    {brand:'Canon', type:'ink', name:'CL-546 צבעוני', sku:'CL-546', compat:'PIXMA MG2450, MG2550, MX495, TS3150, TS3151'},
+    {brand:'Canon', type:'ink', name:'PG-445 שחור', sku:'PG-445', compat:'PIXMA iP2840, MG2440, MG2540, MG2940, MX494'},
+    {brand:'Canon', type:'ink', name:'CL-446 צבעוני', sku:'CL-446', compat:'PIXMA iP2840, MG2440, MG2540, MG2940, MX494'},
+    {brand:'Canon', type:'ink', name:'PG-575 שחור', sku:'PG-575', compat:'PIXMA TS3350, TS3351, TS3355, TS3550i'},
+    {brand:'Canon', type:'ink', name:'CL-576 צבעוני', sku:'CL-576', compat:'PIXMA TS3350, TS3351, TS3355, TS3550i'},
+    /* ---------- Brother טונרים ---------- */
+    {brand:'Brother', type:'toner', name:'TN-2420', compat:'HL-L2310D, HL-L2350DW, HL-L2375DW, DCP-L2510D, MFC-L2710DW'},
+    {brand:'Brother', type:'toner', name:'TN-2320', compat:'HL-L2300D, HL-L2340DW, HL-L2360DN, HL-L2365DW, DCP-L2500D, DCP-L2520DW, DCP-L2540DW, MFC-L2700DW, MFC-L2720DW, MFC-L2740DW'},
+    {brand:'Brother', type:'toner', name:'TN-2010', compat:'HL-2130, HL-2132, DCP-7055'},
+    {brand:'Brother', type:'toner', name:'TN-2220', compat:'HL-2240, HL-2250DN, HL-2270DW, DCP-7060D, DCP-7065DN, MFC-7360N, MFC-7460DN, MFC-7860DW'},
+    {brand:'Brother', type:'toner', name:'TN-1050', compat:'HL-1110, HL-1112, HL-1210W, DCP-1510, DCP-1512, MFC-1810, MFC-1815'},
+    {brand:'Brother', type:'toner', name:'TN-2510XL', compat:'HL-L2400DWE, HL-L2460DN, MFC-L2860DWE, MFC-L2865DW'},
+    {brand:'Brother', type:'toner', name:'TN-3410', compat:'HL-L5000D, HL-L5100DN, HL-L5200DW, MFC-L5700DN, MFC-L5750DW'},
+    {brand:'Brother', type:'toner', name:'TN-3601XL'},
+    {brand:'Brother', type:'toner', name:'TN-3601XXL'},
+    /* ---------- Brother תופים ---------- */
+    {brand:'Brother', type:'drum', name:'DR-2400', compat:'HL-L2310D, HL-L2350DW, HL-L2375DW, DCP-L2510D, MFC-L2710DW'},
+    {brand:'Brother', type:'drum', name:'DR-2300', compat:'HL-L2300D, HL-L2340DW, HL-L2360DN, DCP-L2500D, MFC-L2700DW'},
+    {brand:'Brother', type:'drum', name:'DR-2200', compat:'HL-2240, HL-2250DN, HL-2270DW, DCP-7060D, MFC-7360N'},
+    {brand:'Brother', type:'drum', name:'DR-2510', compat:'HL-L2400DWE, HL-L2460DN, MFC-L2860DWE, MFC-L2865DW'},
+    {brand:'Brother', type:'drum', name:'DR-1050', compat:'HL-1110, HL-1112, HL-1210W, DCP-1510, DCP-1512, MFC-1810, MFC-1815'},
+    {brand:'Brother', type:'drum', name:'DR-3600'},
+    /* ---------- Brother דיו ---------- */
+    {brand:'Brother', type:'ink', name:'LC3213', colors:C4, compat:'MFC-J491DW, MFC-J497DW, MFC-J890DW, MFC-J895DW, DCP-J572DW, DCP-J772DW, DCP-J774DW'},
+    {brand:'Brother', type:'ink', name:'LC3219XL', colors:C4, compat:'MFC-J5330DW, MFC-J5335DW, MFC-J5730DW, MFC-J5930DW, MFC-J6530DW, MFC-J6930DW, MFC-J6935DW'},
+    {brand:'Brother', type:'ink', name:'LC22U', colors:C4, compat:'MFC-J5920DW, MFC-J6520DW, MFC-J6720DW, MFC-J6920DW'},
+    {brand:'Brother', type:'ink', name:'LC223', colors:C4, compat:'DCP-J562DW, MFC-J480DW, MFC-J680DW, MFC-J880DW, MFC-J4420DW, MFC-J4620DW, MFC-J5320DW, MFC-J5620DW, MFC-J5625DW, MFC-J5720DW'},
+    {brand:'Brother', type:'ink', name:'LC123', colors:C4, compat:'DCP-J132W, DCP-J152W, DCP-J552DW, DCP-J752DW, MFC-J470DW, MFC-J650DW, MFC-J870DW'},
+    {brand:'Brother', type:'ink', name:'LC421XL', colors:C4, compat:'DCP-J1050DW, DCP-J1140DW, MFC-J1010DW'},
+    {brand:'Brother', type:'ink', name:'LC422XL', colors:C4},
+    {brand:'Brother', type:'ink', name:'LC521XL', colors:C4},
+    {brand:'Brother', type:'ink', name:'LC527XL', colors:C4},
+    {brand:'Brother', type:'ink', name:'LC426XL', colors:C4},
+    /* ---------- Samsung ---------- */
+    {brand:'Samsung', type:'toner', name:'111S', sku:'MLT-D111S', compat:'Xpress M2020, M2020W, M2022, M2022W, M2070, M2070W, M2070FW'},
+    {brand:'Samsung', type:'toner', name:'115S', sku:'MLT-D115S', compat:'Xpress M2620, M2820, M2870 series'},
+    {brand:'Samsung', type:'toner', name:'203L', sku:'MLT-D203L', compat:'ProXpress M3320, M3370, M3820, M3870, M4020, M4070'},
+    {brand:'Samsung', type:'toner', name:'203E', sku:'MLT-D203E', compat:'ProXpress M3320, M3370, M3820, M3870, M4020, M4070'},
+    {brand:'Samsung', type:'toner', name:'105L', sku:'MLT-D105L', compat:'ML-1910, ML-1915, ML-2525, ML-2580, SCX-4600, SCX-4623, SF-650'},
+    {brand:'Samsung', type:'toner', name:'103L', sku:'MLT-D103L', compat:'ML-2950, ML-2955, SCX-4728, SCX-4729'},
+    {brand:'Samsung', type:'toner', name:'201L', sku:'MLT-D201L', compat:'ProXpress M4030ND, M4080FX'},
+    /* ---------- Pantum ---------- */
+    {brand:'Pantum', type:'toner', name:'410H', sku:'TL-410H', compat:'P3010, P3300, M6700, M6800, M7100, M7200, M7300'},
+    {brand:'Pantum', type:'toner', name:'410X', sku:'TL-410X', compat:'P3010, P3300, M6700, M6800, M7100, M7200, M7300'},
+    {brand:'Pantum', type:'toner', name:'PA210', sku:'PA-210', compat:'P2200, P2500, M6500, M6600'},
+    {brand:'Pantum', type:'toner', name:'PA260'},
+    {brand:'Pantum', type:'toner', name:'PA2310'},
+    {brand:'Pantum', type:'toner', name:'PA5120'}
+  ];
+  P.forEach(function(p){ if(p.price === undefined) p.price = 0; });
+  var PRODUCTS = P;
+  var PAGE = 24;
+
+  var BRAND_COLOR = {HP:'#0096D6', Canon:'#DA291C', Brother:'#0075C9', Samsung:'#1428A0', Pantum:'#0E8A7D'};
+  var COLOR_HEX = {'שחור':'#16151A','ציאן':'#00A6E0','מגנטה':'#E6007E','צהוב':'#F7DB04'};
+  var COLOR_BG = {'צבעוני':'conic-gradient(#00A6E0 0 33%, #E6007E 0 66%, #F7DB04 0)'};
+  var TYPE_HE = {toner:'טונר', ink:'דיו', drum:'תוף'};
+  var TYPE_SEARCH = {toner:'טונר טונרים toner', ink:'דיו ראש דיו ink', drum:'תוף תופים drum'};
+
+  var grid = document.getElementById('catGrid'), q = document.getElementById('catQ'),
+      count = document.getElementById('catCount'), empty = document.getElementById('catEmpty'),
+      emptyBtn = document.getElementById('catEmptyBtn'), filtersEl = document.getElementById('catFilters'),
+      moreWrap = document.getElementById('catMore'), moreBtn = document.getElementById('catMoreBtn');
+  var state = {type:'', brand:''}, limit = PAGE;
+
+  function norm(s){ return String(s).toLowerCase().replace(/[^a-z0-9֐-׿]/g, ''); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function waLink(text){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); }
+  function dname(p){ return p.vn ? p.vn[p.sel] : p.name; }
+  function colorName(p){ return p.colors ? p.colors[p.sel] : ''; }
+  function title(p){ return TYPE_HE[p.type] + ' ' + p.brand + ' ' + dname(p) + (p.colors ? ' ' + colorName(p) : ''); }
+
+  PRODUCTS.forEach(function(p, i){
+    p._i = i; p.sel = 0;
+    p.hay = norm([p.brand, p.name, (p.vn||[]).join(' '), p.sku||'', p.compat||'', TYPE_SEARCH[p.type], (p.colors||[]).join(' ')].join(' '));
+  });
+
+  function picture(p){
+    var c = BRAND_COLOR[p.brand] || '#16151A', band = c, label = esc(dname(p).split(' ')[0]), svg, fs;
+    var cn = colorName(p);
+    if(cn && COLOR_HEX[cn]) band = COLOR_HEX[cn];
+    var multi = cn === 'צבעוני';
+    function bandRect(x,y,w,h,r){
+      if(multi) return '<rect x="'+x+'" y="'+y+'" width="'+(w/3)+'" height="'+h+'" fill="#00A6E0"/><rect x="'+(x+w/3)+'" y="'+y+'" width="'+(w/3)+'" height="'+h+'" fill="#E6007E"/><rect x="'+(x+2*w/3)+'" y="'+y+'" width="'+(w/3)+'" height="'+h+'" fill="#F7DB04"/>';
+      return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(r||0)+'" fill="'+band+'"/>';
+    }
+    fs = function(big,mid,small){ return label.length>8 ? small : (label.length>6 ? mid : big); };
+    if(p.type === 'toner'){
+      svg = '<rect x="24" y="78" width="152" height="70" rx="12" fill="#2B2A30"/>' +
+            '<rect x="40" y="62" width="120" height="22" rx="8" fill="#3d3c44"/>' +
+            bandRect(24,78,152,12,0) +
+            '<rect x="44" y="98" width="112" height="38" rx="5" fill="#fff"/>' +
+            '<text x="100" y="125" text-anchor="middle" font-family="Assistant,Arial,sans-serif" font-weight="800" font-size="'+fs(24,19,15)+'" fill="#16151A">'+label+'</text>' +
+            '<rect x="14" y="96" width="10" height="34" rx="4" fill="#3d3c44"/>';
+    } else if(p.type === 'drum'){
+      svg = '<rect x="30" y="64" width="140" height="80" rx="14" fill="#2B2A30"/>' +
+            '<ellipse cx="30" cy="104" rx="12" ry="40" fill="#5b5a63"/><ellipse cx="170" cy="104" rx="12" ry="40" fill="#3d3c44"/>' +
+            '<rect x="30" y="64" width="140" height="10" fill="'+c+'"/>' +
+            '<rect x="50" y="86" width="100" height="38" rx="5" fill="#fff"/>' +
+            '<text x="100" y="113" text-anchor="middle" font-family="Assistant,Arial,sans-serif" font-weight="800" font-size="'+fs(22,18,14)+'" fill="#16151A">'+label+'</text>';
+    } else {
+      svg = '<rect x="62" y="34" width="76" height="118" rx="10" fill="#2B2A30"/>' +
+            bandRect(62,34,76,16,6) +
+            '<rect x="70" y="62" width="60" height="48" rx="5" fill="#fff"/>' +
+            '<text x="100" y="92" text-anchor="middle" font-family="Assistant,Arial,sans-serif" font-weight="800" font-size="'+(label.length>7?12:(label.length>5?15:20))+'" fill="#16151A">'+label+'</text>' +
+            '<rect x="78" y="152" width="44" height="12" rx="3" fill="#8a8890"/>';
+    }
+    return '<svg viewBox="0 0 200 180" role="img" aria-label="'+esc(title(p))+'">'+svg+'</svg>';
+  }
+
+  function swatches(p){
+    if(!p.colors) return '';
+    return '<div class="swatches" role="group" aria-label="בחירת צבע">' + p.colors.map(function(c,i){
+      var bg = COLOR_BG[c] || COLOR_HEX[c];
+      return '<button type="button" class="sw" data-i="'+p._i+'" data-c="'+i+'" aria-pressed="'+(i===p.sel)+'" aria-label="'+esc(c)+'" title="'+esc(c)+'" style="background:'+bg+'"></button>';
+    }).join('') + '<span class="sw-name">' + esc(colorName(p)) + '</span></div>';
+  }
+
+  function card(p){
+    var msg = 'היי, אני מעוניין לרכוש ' + title(p) + (p.sku && p.sku !== p.name ? ' (' + p.sku + ')' : '') + '. אפשר לאשר מחיר וזמינות?';
+    var price = p.price > 0 ? '<div class="pcard-price">₪' + p.price + ' <small>ליחידה</small></div>' : '';
+    var sku = p.sku && p.sku !== dname(p) ? '<bdi dir="ltr">'+esc(p.sku)+'</bdi>' : '';
+    var compat = p.compat ? 'מתאים ל: <bdi dir="ltr">'+esc(p.compat)+'</bdi>' : '';
+    return '<article class="pcard" data-i="'+p._i+'">' +
+      '<div class="pcard-img">' + picture(p) + '</div>' +
+      '<div class="pcard-body">' +
+        '<span class="pcard-brand" style="background:'+(BRAND_COLOR[p.brand]||'#16151A')+'">'+esc(p.brand)+'</span>' +
+        '<h3>'+TYPE_HE[p.type]+' <bdi dir="ltr">'+esc(p.brand+' '+dname(p))+'</bdi></h3>' +
+        swatches(p) +
+        ((sku || compat) ? '<p class="pcard-compat">'+sku+(sku && compat ? '<br>' : '')+compat+'</p>' : '') +
+      '</div>' + price +
+      '<a class="buy" href="'+waLink(msg)+'" target="_blank" rel="noopener" data-sku="'+esc(p.sku||dname(p))+'">' +
+        '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163A11.9 11.9 0 010 11.9C0 5.34 5.34 0 11.9 0c3.18 0 6.17 1.24 8.41 3.49A11.8 11.8 0 0123.8 11.9c0 6.56-5.34 11.9-11.9 11.9-2 0-3.95-.5-5.7-1.45L.057 24zm6.6-3.8l.38.22A9.9 9.9 0 0011.9 21.8c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.83 9.83 0 0011.9 2C6.44 2 2 6.44 2 11.9c0 1.87.52 3.69 1.5 5.27l.24.38-1 3.65 3.8-1z"/></svg>' +
+        'לחץ כאן לרכישה</a>' +
+    '</article>';
+  }
+
+  var current = [];
+  function render(keepLimit){
+    if(!keepLimit) limit = PAGE;
+    var tokens = q.value.trim().split(/\s+/).map(norm).filter(Boolean);
+    current = PRODUCTS.filter(function(p){
+      if(state.type && p.type !== state.type) return false;
+      if(state.brand && p.brand !== state.brand) return false;
+      return tokens.every(function(t){ return p.hay.indexOf(t) !== -1; });
+    });
+    grid.innerHTML = current.slice(0, limit).map(card).join('');
+    var filtered = tokens.length || state.type || state.brand;
+    count.textContent = current.length ? (filtered ? 'נמצאו ' + current.length + ' תוצאות' : 'דגמים נפוצים — ' + current.length + ' מוצרים') : '';
+    empty.style.display = current.length ? 'none' : 'block';
+    var rest = current.length - limit;
+    moreWrap.style.display = rest > 0 ? 'block' : 'none';
+    if(rest > 0) moreBtn.textContent = 'הצג עוד מוצרים (' + rest + ')';
+    if(!current.length){
+      var txt = q.value.trim();
+      emptyBtn.href = waLink(txt ? 'היי, אני מחפש טונר/דיו לדגם: ' + txt : 'היי, אני מחפש טונר/דיו. אפשר לעזור?');
+    }
+  }
+
+  var DEFS = [['','','הכל'],['type','toner','טונרים'],['type','ink','דיו'],['type','drum','תופים'],
+              ['brand','HP','HP'],['brand','Canon','Canon'],['brand','Brother','Brother'],['brand','Samsung','Samsung'],['brand','Pantum','Pantum']];
+  function chips(){
+    filtersEl.innerHTML = DEFS.map(function(d,i){
+      var on = d[0]==='' ? (!state.type && !state.brand) : state[d[0]] === d[1];
+      return '<button type="button" class="chip" data-i="'+i+'" aria-pressed="'+on+'">'+d[2]+'</button>';
+    }).join('');
+  }
+  filtersEl.addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    var d = DEFS[+b.getAttribute('data-i')];
+    if(d[0]===''){ state.type=''; state.brand=''; }
+    else state[d[0]] = state[d[0]] === d[1] ? '' : d[1];
+    chips(); render();
+  });
+  q.addEventListener('input', function(){ render(); });
+  moreBtn.addEventListener('click', function(){ limit += PAGE; render(true); });
+  grid.addEventListener('click', function(e){
+    var sw = e.target.closest('.sw');
+    if(sw){
+      var p = PRODUCTS[+sw.getAttribute('data-i')]; p.sel = +sw.getAttribute('data-c');
+      var art = sw.closest('.pcard'); art.outerHTML = card(p);
+      var again = grid.querySelector('.pcard[data-i="'+p._i+'"] .sw[data-c="'+p.sel+'"]'); if(again) again.focus();
+      return;
+    }
+    var a = e.target.closest('a.buy'); if(!a || typeof gtag !== 'function') return;
+    gtag('event', 'generate_lead', {'event_category':'whatsapp', 'event_label':'product_' + a.getAttribute('data-sku')});
+  });
+  chips(); render();
+})();
+</script>
+<script>
+(function(){
+  var els = [].slice.call(document.querySelectorAll('[data-bg]'));
+  function load(el){ el.style.backgroundImage = "url('" + el.getAttribute('data-bg') + "')"; el.removeAttribute('data-bg'); }
+  if(!('IntersectionObserver' in window)){ els.forEach(load); return; }
+  var groups = [];
+  els.forEach(function(el){
+    var host = el.closest('.pricelist-track') || el, g = groups.filter(function(x){ return x.host === host; })[0];
+    if(!g){ g = {host: host, items: []}; groups.push(g); }
+    g.items.push(el);
+  });
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      groups.forEach(function(g){ if(g.host === e.target){ g.items.forEach(load); io.unobserve(g.host); } });
+    });
+  }, {rootMargin:'600px 0px'});
+  groups.forEach(function(g){ io.observe(g.host); });
+})();
+</script>
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: #fff; padding: 15px; text-align: center; z-index: 9999; font-family: sans-serif; font-size: 14px;">
+  אתר זה משתמש בעוגיות (Cookies) ובכלי ניתוח של Google Analytics ו-Google Ads כדי לנתח תנועה ולשפר את חווית המשתמש. 
+  <button onclick="document.getElementById('cookie-banner').style.display='none'" style="background: #28a745; color: white; border: none; padding: 5px 15px; margin-right: 10px; cursor: pointer; border-radius: 4px;">מאשר/ת</button>
+</div>
+ <!-- פוטר נגישות ומדיניות -->
+<footer style="text-align: center; padding: 20px; background: #f1f1f1; margin-top: 40px; font-family: sans-serif; font-size: 13px; line-height: 1.8;">
+  <p>© מרכז הדיו נתניה - כל הזכויות שמורות | כל המחירים והמבצעים כפופים למלאי הקיים. התמונות להמחשה בלבד. ט.ל.ח.</p>
+  <p>
+    <a href="#accessibility" onclick="alert('הצהרת נגישות:\nמרכז הדיו רואה חשיבות רבה במתן שירות שוויוני לכלל הלקוחות. האתר נבנה בהתאם לתקני הנגישות המקובלים (WCAG 2.1 level AA).\nאם נתקלתם בבעיית נגישות, אנא צרו עמנו קשר בטלפון או בוואטסאפ ונשמח לסייע!'); return false;" style="margin-left: 15px;">הצהרת נגישות</a>
+    |
+    <a href="#cancellation" onclick="alert('מדיניות ביטול עסקה ומשלוחים - מרכז הדיו:\n1. ניתן לבטל עסקה תוך 14 ימים מיום קבלת המוצר בהתאם לחוק הגנת הצרכן.\n2. הביטול מותנה בהחזרת המוצר באריזתו המקורית, שלם, שלא נפתח ושלא נעשה בו שימוש.\n3. מוצרים שאריזתם הרמטית נפתחה (כגון דיו/טונר) לא ניתן להחזיר.\n4. בביטול שלא עקב פגם ינוכו דמי ביטול כחוק (עד 5% או 100 ש״ח) ועלות המשלוח תחול על הלקוח.'); return false;" style="margin-right: 15px;">מדיניות ביטול עסקה</a>
+  </p>
+</footer>
+
+  
+</body>
+</html>
