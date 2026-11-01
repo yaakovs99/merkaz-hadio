@@ -398,6 +398,21 @@
     .bs-go{ width:70%; margin-top:10px; font-size:16px; padding:8px 6px; }
     .bs-single{ font-size:20px; padding:17px 12px; margin-bottom:26px; }
   }
+
+  /* ---------- תצוגת מחשב בלבד (מסכים רחבים). לא משפיע על הנייד ---------- */
+  @media (min-width:1000px){
+    .header-tagline{ font-size:14px; }
+    .hero{ min-height:640px; align-items:center; background:var(--ink); }
+    .hero-img{ inset:0 auto 0 0; width:44%; background-position:center 62%; }
+    .hero-scrim{ inset:0 auto 0 0; width:44%; background:linear-gradient(90deg, rgba(15,13,8,0) 55%, var(--ink) 100%); }
+    .hero-content{ padding:70px 0; }
+    .hero-content .wrap{ max-width:none; padding-right:max(28px, calc((100% - 1120px)/2 + 28px)); padding-left:calc(44% + 40px); }
+    .how-steps{ flex-direction:row; align-items:flex-start; justify-content:center; max-width:900px; gap:22px; }
+    .how-step{ width:auto; flex:1; flex-direction:column; text-align:center; gap:10px; }
+    .how-text{ text-align:center; }
+    .how-arrow{ transform:rotate(90deg); margin-top:12px; }
+  }
+  @media (min-width:1000px) and (max-width:1250px){ .badge-stamp{ margin-top:44px; } }
 </style>
 </head>
 <body>
