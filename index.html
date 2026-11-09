@@ -355,6 +355,8 @@
     .night-text{ flex: 1 1 calc(100% - 60px); }
     .night h2{ font-size: 18px; }
     .night-sub{ font-size: 13px; }
+    .night-area{ display:block; }
+    .night-area .sep{ display:none; }
     .night-cta{ flex: 1 1 100%; justify-content: space-between; }
     .night-cta .btn-wa{ flex: 1; }
   }
@@ -416,6 +418,83 @@
     .how-arrow{ transform:rotate(90deg); margin-top:12px; }
   }
   @media (min-width:1000px) and (max-width:1250px){ .badge-stamp{ margin-top:44px; } }
+
+  /* ---------- שורת חיפוש עליונה: "מה הדגם של המדפסת שלך?" ---------- */
+  .finder{ background:linear-gradient(180deg,#FFFFFF 0%, var(--paper) 100%); border-bottom:1px solid var(--line); box-shadow:0 8px 20px -14px rgba(22,21,26,.45); position:relative; z-index:3; }
+  .finder-inner{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px; padding-top:14px; padding-bottom:14px; }
+  .finder-title{ font-family:'Suez One',serif; font-size:23px; line-height:1.25; color:var(--ink); white-space:nowrap; }
+  .finder-title span{ background:linear-gradient(transparent 62%, var(--yellow) 62%, var(--yellow) 92%, transparent 92%); padding:0 3px; }
+  .finder-form{ display:flex; align-items:center; flex:1 1 380px; min-width:0; margin:0; background:#fff; border:2px solid var(--ink); border-radius:999px; padding:4px 4px 4px 4px; box-shadow:0 6px 18px -8px rgba(22,21,26,.35); transition:box-shadow .2s, border-color .2s; }
+  .finder-form:focus-within{ box-shadow:0 0 0 4px rgba(247,219,4,.55), 0 6px 18px -8px rgba(22,21,26,.35); }
+  .finder-form input{ flex:1; min-width:0; font:inherit; font-size:18px; padding:9px 18px; border:0; background:transparent; color:var(--ink); outline:none; }
+  .finder-form input::placeholder{ color:#8a8775; }
+  .finder-form button{ display:inline-flex; align-items:center; gap:8px; font:inherit; font-weight:800; font-size:17px; padding:10px 22px; border:0; border-radius:999px; background:var(--ink); color:var(--yellow); cursor:pointer; white-space:nowrap; transition:transform .15s, background .15s; }
+  .finder-form button svg{ width:20px; height:20px; flex-shrink:0; }
+  .finder-form button:hover{ background:#000; transform:scale(1.03); }
+  .finder-ex{ flex-basis:100%; display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; font-size:14px; color:#6b6857; padding-top:2px; }
+  .finder-ex button{ font:inherit; font-size:14px; font-weight:600; padding:3px 13px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); cursor:pointer; direction:ltr; transition:border-color .15s, background .15s; }
+  .finder-ex button:hover{ border-color:var(--ink); background:var(--yellow); }
+  @media (max-width:640px){
+    .finder-title{ font-size:16px; white-space:normal; flex-basis:100%; line-height:1.2; }
+    .finder-inner{ padding-top:7px; padding-bottom:8px; gap:5px 0; }
+    .finder-form{ flex-basis:100%; padding:2px; border-width:1.5px; box-shadow:0 4px 12px -8px rgba(22,21,26,.4); }
+    .finder-form input{ font-size:15px; padding:6px 12px; }
+    .finder-form button{ padding:7px 13px; font-size:14px; gap:5px; }
+    .finder-form button svg{ width:16px; height:16px; }
+    .finder-ex{ display:none; }
+  }
+  /* תג "הנמכר ביותר" */
+  .pcard-img{ position:relative; }
+  .pop-badge{ position:absolute; top:10px; right:10px; z-index:2; background:var(--yellow); color:var(--ink); border:2px solid var(--ink); border-radius:8px; padding:1px 9px; font-weight:800; font-size:13px; line-height:1.5; transform:rotate(3deg); box-shadow:2px 2px 0 rgba(0,0,0,.25); }
+
+  /* כתובת קטנה בכותרת */
+  .header-mid{ display:none; flex-direction:column; align-items:center; gap:3px; }
+  .header-addr{ display:inline-flex; align-items:center; gap:5px; font-size:12.5px; letter-spacing:.2px; color:var(--yellow); text-decoration:none; opacity:.9; padding:1px 10px; border-radius:999px; border:1px solid rgba(247,219,4,.35); transition:background .2s, opacity .2s; }
+  .header-addr svg{ width:13px; height:13px; flex-shrink:0; }
+  .header-addr:hover{ opacity:1; background:rgba(247,219,4,.14); }
+  @media (min-width:720px){ .header-mid{ display:flex; } .header-mid .header-tagline{ display:block; } }
+
+  /* ---------- ביקורות ---------- */
+  .rv-stars{ display:inline-flex; gap:1px; vertical-align:middle; }
+  .rv-stars svg{ width:15px; height:15px; fill:#F5B400; }
+  .finder-row2{ flex-basis:100%; display:flex; align-items:center; justify-content:space-between; gap:8px 14px; flex-wrap:wrap; }
+  .finder-row2 .finder-ex{ flex:1 1 auto; padding-top:0; }
+  .finder-rate{ display:inline-flex; align-items:center; gap:6px; font-size:13.5px; color:var(--ink); text-decoration:none; white-space:nowrap; padding:2px 4px; }
+  .finder-rate b{ font-weight:800; }
+  .finder-rate span:last-child{ color:#6b6857; text-decoration:underline; text-underline-offset:3px; }
+  .finder-rate:hover span:last-child{ color:var(--ink); }
+  .bs-rate{ display:inline-flex; align-items:center; gap:6px; margin:-6px 0 12px; font-size:14px; color:var(--ink); text-decoration:none; }
+  .bs-rate b{ font-weight:800; }
+  .reviews{ padding:54px 0; border-top:1px solid var(--line); background:linear-gradient(180deg,#fff 0%, var(--paper) 100%); }
+  .rv-head{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; margin-bottom:26px; }
+  .rv-head h2{ font-size:30px; }
+  .rv-sum{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); }
+  .rv-big{ font-family:'Suez One',serif; font-size:38px; line-height:1; }
+  .rv-sum .rv-stars svg{ width:20px; height:20px; }
+  .rv-count{ font-size:15px; text-decoration:underline; text-underline-offset:3px; color:#6b6857; }
+  .rv-list{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:start; max-width:1020px; margin:0 auto; }
+  .rv-shot{ margin:0; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 8px 22px -16px rgba(22,21,26,.55); }
+  .rv-shot img{ display:block; width:100%; height:auto; }
+  .rv-card{ margin:0; background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 16px 14px; display:flex; flex-direction:column; gap:10px; box-shadow:0 8px 20px -16px rgba(22,21,26,.5); }
+  .rv-card blockquote{ margin:0; font-size:16px; line-height:1.55; flex:1; }
+  .rv-card figcaption{ font-weight:800; font-size:14px; color:var(--ink); }
+  .rv-card figcaption::before{ content:'— '; color:var(--yellow-deep, #B89B00); }
+  .rv-actions{ display:flex; flex-wrap:wrap; gap:10px 14px; justify-content:center; margin-top:24px; }
+  .rv-btn{ display:inline-block; padding:11px 22px; border-radius:999px; border:2px solid var(--ink); background:var(--ink); color:var(--yellow); font-weight:800; text-decoration:none; font-size:16px; }
+  .rv-btn2{ background:#fff; color:var(--ink); }
+  .rv-btn:hover{ transform:translateY(-1px); }
+  @media (max-width:760px){ .rv-list{ grid-template-columns:1fr; } }
+  @media (max-width:640px){
+    .reviews{ padding:40px 0; }
+    .rv-head h2{ font-size:25px; }
+    .rv-list{ gap:12px; }
+    .finder-row2{ display:contents; }
+    .finder-title{ flex:1 1 auto; flex-basis:auto; order:1; }
+    .finder-rate{ order:2; font-size:12px; gap:4px; padding:0; }
+    .finder-rate .rv-stars svg{ width:12px; height:12px; }
+    .finder-rate span:last-child{ display:none; }
+    .finder-form{ order:3; }
+  }
 </style>
 </head>
 <body>
@@ -424,10 +503,33 @@
 <header>
   <div class="wrap header-inner">
     <div class="brand-logo"><img src="images/logo.webp" alt="מרכז הדיו נתניה" width="131" height="46" fetchpriority="high"></div>
-    <span class="header-tagline">מדפסות · טונרים · ראשי דיו · ציוד משרדי</span>
+    <div class="header-mid">
+      <span class="header-tagline">מדפסות · טונרים · ראשי דיו · ציוד משרדי</span>
+      <a class="header-addr" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>המחקר 3, נתניה</a>
+    </div>
     <a class="header-phone" href="tel:+972553009967"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.8 3 4.2 3.4 3.8 4 3.8h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="label">התקשרו:</span> 055-3009967</a>
   </div>
 </header>
+
+<div class="finder" id="finder">
+  <div class="wrap finder-inner">
+    <label class="finder-title" for="finderQ"><span>מה הדגם של המדפסת שלך?</span></label>
+    <form class="finder-form" id="finderForm" role="search" autocomplete="off">
+      <input id="finderQ" type="search" inputmode="search" enterkeyhint="search" placeholder="הקלידו דגם מדפסת">
+      <button type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>מצאו לי טונר</button>
+    </form>
+    <div class="finder-row2">
+    <div class="finder-ex" aria-label="דוגמאות">
+      <span>לדוגמה:</span>
+      <button type="button" data-q="HP P1102">HP P1102</button>
+      <button type="button" data-q="Brother 2320">Brother 2320</button>
+      <button type="button" data-q="Canon MF3010" class="fx-more">Canon MF3010</button>
+      <button type="button" data-q="Samsung M2020" class="fx-more">Samsung M2020</button>
+    </div>
+    <a class="finder-rate" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener" aria-label="5.0 כוכבים, ביקורות בגוגל"><span class="rv-stars " aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><b>5.0</b><span>· ביקורות בגוגל</span></a>
+    </div>
+  </div>
+</div>
 
 <section class="hero">
   <div class="hero-img"></div>
@@ -461,7 +563,7 @@
     <svg class="night-moon" viewBox="0 0 100 100" aria-hidden="true"><path d="M62 10a40 40 0 1 0 28 62A34 34 0 0 1 62 10z" fill="#F7DB04"/><circle cx="82" cy="24" r="3" fill="#fff"/><circle cx="94" cy="44" r="2" fill="#fff"/></svg>
     <div class="night-text">
       <h2 id="nightTitle">נגמר הדיו או הטונר באמצע הלילה? יש פתרון</h2>
-      <p class="night-sub">איסוף או משלוח · <b>עד 22:00</b></p>
+      <p class="night-sub">איסוף או משלוח · <b>עד 22:00</b><span class="night-area"><span class="sep"> · </span>השירות ניתן באזור נתניה והסביבה</span></p>
     </div>
     <div class="night-cta">
       <a class="btn btn-wa" href="https://wa.me/972553009967?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%20%D7%93%D7%99%D7%95/%D7%98%D7%95%D7%A0%D7%A8%20%D7%93%D7%97%D7%95%D7%A3%20%28%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%94%D7%A2%D7%A8%D7%91%29.%20%D7%93%D7%92%D7%9D%20%D7%94%D7%9E%D7%93%D7%A4%D7%A1%D7%AA%20%D7%A9%D7%9C%D7%99%3A%20" target="_blank" rel="noopener" onclick="gtag('event', 'generate_lead', {'event_category': 'whatsapp', 'event_label': 'night_urgent'});"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/></svg>כתבו לנו בוואטסאפ</a>
@@ -680,6 +782,25 @@
         <span class="how-num">3</span>
         <span class="how-text">הטונר מגיע אליכם</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="rvTitle">
+  <div class="wrap">
+    <div class="rv-head">
+      <h2 id="rvTitle">מה הלקוחות אומרים</h2>
+      <a class="rv-sum" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener"><span class="rv-big">5.0</span><span class="rv-stars " aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><span class="rv-count">ביקורות בגוגל</span></a>
+    </div>
+    <div class="rv-list">
+      <figure class="rv-shot"><img src="images/reviews/review-limor.webp" width="484" height="198" alt="ביקורת בגוגל מאת לימור דרעי, 5 כוכבים: ממליצה בחום על יעקב, הייתי צריכה טונר וקיבלתי תוך מספר שעות במחיר סביר לחלוטין." loading="lazy" decoding="async"></figure>
+      <figure class="rv-shot"><img src="images/reviews/review-liza.webp" width="495" height="186" alt="ביקורת בגוגל מאת Liza Martinova, 5 כוכבים: אחלה מקום לקנות בו טונרים למדפסת. חנות שמוכרת רק דיו וטונרים וזה יוצר התמחות בנושא." loading="lazy" decoding="async"></figure>
+      <figure class="rv-shot"><img src="images/reviews/review-agm.webp" width="444" height="163" alt="ביקורת בגוגל מאת א.ג.מ. שלטים והנצחה, 5 כוכבים: מספר אחד בתחום" loading="lazy" decoding="async"></figure>
+      <figure class="rv-shot"><img src="images/reviews/review-royale.webp" width="499" height="264" alt="ביקורת בגוגל מאת royale muffin, מליץ מקומי, 5 כוכבים: אני רוצה להמליץ בחום על העסק ועל יעקב בפרט. הכרנו במקרה כשהייתי צריכה דיו ויצרתי איתו קשר כאחד הספקים הפוטנציאלים ומאז אני לא מוכנה לעבוד עם אף אחד אחר." loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="rv-actions">
+      <a class="rv-btn" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener">לכל הביקורות בגוגל</a>
+      <a class="rv-btn rv-btn2" href="https://search.google.com/local/writereview?placeid=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener">אהבתם? כתבו לנו ביקורת</a>
     </div>
   </div>
 </section>
@@ -1059,13 +1180,14 @@
     }).join('') + '<span class="sw-name">' + esc(colorName(p)) + '</span></div>';
   }
 
+  var POPULAR = ['HP 85A','HP 83A','HP 12A','HP 78A','HP 26A','HP 44A','HP 106X','HP 106A','Brother TN-1050','Brother TN-2420','Brother TN-2320','Brother TN-2510XL','Canon 071','Pantum 410H'];
   function card(p){
     var msg = 'היי, אני מעוניין לרכוש ' + title(p) + (p.sku && p.sku !== p.name ? ' (' + p.sku + ')' : '') + '. אפשר לאשר מחיר וזמינות?';
     var price = SHOW_PRICES && p.price > 0 ? '<div class="pcard-price"><span class="pp-num" dir="ltr">' + p.price + '<span class="pp-cur">&nbsp;&#8362;</span></span> <small>ליחידה</small></div>' : '';
     var sku = p.sku && p.sku !== dname(p) ? '<bdi dir="ltr">'+esc(p.sku)+'</bdi>' : '';
     var compat = p.compat ? 'מתאים ל: <bdi dir="ltr">'+esc(p.compat)+'</bdi>' : '';
     return '<article class="pcard" data-i="'+p._i+'">' +
-      '<div class="pcard-img">' + picture(p) + '</div>' +
+      '<div class="pcard-img">' + (POPULAR.indexOf(p.brand+' '+p.name) !== -1 ? '<span class="pop-badge">&#9733; הנמכר ביותר</span>' : '') + picture(p) + '</div>' +
       '<div class="pcard-body">' +
         '<span class="pcard-brand" style="background:'+(BRAND_COLOR[p.brand]||'#16151A')+'">'+esc(p.brand)+'</span>' +
         '<h3>'+TYPE_HE[p.type]+' <bdi dir="ltr">'+esc(p.brand+' '+dname(p))+'</bdi></h3>' +
@@ -1115,6 +1237,7 @@
     var html = '<button type="button" class="bs-x" aria-label="סגירה">&times;</button>' +
       '<h2>מבצעי מארזים</h2>' +
       '<p class="bs-sub">קונים יותר וחוסכים, על <bdi dir="ltr">' + esc(p.brand + ' ' + dname(p)) + '</bdi></p>' +
+      '<a class="bs-rate" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener"><span class="rv-stars " aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><b>5.0</b> · ביקורות בגוגל</a>' +
       '<a class="bs-single" href="' + waLink('היי, אני מעוניין לרכוש ' + base + '. אפשר לאשר מחיר וזמינות?') + '" target="_blank" rel="noopener">מעוניין ביחידה אחת בלבד? לחץ כאן</a><div class="bs-grid">';
     BUNDLES.forEach(function(b, i){
       var msg = 'היי, אני מעוניין ב' + b.text + ' של ' + base + '. אפשר לאשר מחיר וזמינות?';
@@ -1466,5 +1589,24 @@ document.addEventListener('click', function(e){
 </footer>
 
   
+<script>
+(function(){
+  var form = document.getElementById('finderForm'), fq = document.getElementById('finderQ'), cq = document.getElementById('catQ');
+  if(!form || !fq || !cq) return;
+  function go(v){
+    v = (v || '').trim();
+    cq.value = v;
+    cq.dispatchEvent(new Event('input', {bubbles:true}));
+    var cat = document.getElementById('catalog');
+    var h = document.querySelector('header'); var off = (h ? h.offsetHeight : 0) + 8;
+    var top = (document.getElementById('catQ').getBoundingClientRect().top + window.pageYOffset) - off - 70;
+    window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
+  }
+  form.addEventListener('submit', function(e){ e.preventDefault(); go(fq.value); fq.blur(); });
+  [].slice.call(document.querySelectorAll('.finder-ex button')).forEach(function(b){
+    b.addEventListener('click', function(){ fq.value = b.getAttribute('data-q'); go(fq.value); });
+  });
+})();
+</script>
 </body>
 </html>
