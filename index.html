@@ -17,7 +17,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>מרכז הדיו נתניה | מדפסות, טונרים ודיו, ציוד משרדי</title>
-<meta name="description" content="מרכז הדיו נתניה — מדפסות, טונרים, דיו וראשי דיו, ציוד משרדי. משלוחים חינם. מבצע: קונים 4 טונרים ומקבלים 1 מתנה. רח' המחקר 3, נתניה. 0553009967">
+<meta name="description" content="מרכז הדיו נתניה — מדפסות, טונרים, דיו וראשי דיו, ציוד משרדי. משלוח חינם בנתניה והסביבה. מבצע: קונים 4 טונרים ומקבלים 1 מתנה. רח' המחקר 3, נתניה. 0553009967">
 
 
 <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
@@ -258,6 +258,11 @@
     background: var(--paper); color: var(--ink); border: 1px solid var(--line);
   }
   .chip[aria-pressed="true"]{ background: var(--ink); color: var(--yellow); border-color: var(--ink); }
+  .cat-ship{ display:flex; align-items:center; gap:8px; margin:0 0 16px; padding:8px 14px; border:1px dashed #cfc9a8; border-radius:10px; background:#FFFBE0; color:var(--ink); text-decoration:none; font-size:14.5px; }
+  .cat-ship b{ font-weight:800; }
+  .cat-ship .cs-arr{ margin-inline-start:auto; font-size:20px; line-height:1; color:#6b6857; }
+  @media (max-width:640px){ .cat-ship .cs-rest{ display:none; } .cat-ship{ font-size:14px; } }
+  .cat-ship:hover{ background:#FFF6C2; }
   .cat-count{ font-size: 14px; color: var(--ink-soft); margin: 10px 0 18px; min-height: 22px; }
   .cat-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
   @media (max-width: 560px){ .cat-grid{ grid-template-columns: 1fr 1fr; gap: 12px; } }
@@ -459,6 +464,8 @@
   .rv-stars svg{ width:15px; height:15px; fill:#F5B400; }
   .finder-row2{ flex-basis:100%; display:flex; align-items:center; justify-content:space-between; gap:8px 14px; flex-wrap:wrap; }
   .finder-row2 .finder-ex{ flex:1 1 auto; padding-top:0; }
+  .ship-btn{ display:inline-flex; align-items:center; gap:6px; border:1.5px solid var(--ink); border-radius:999px; padding:5px 14px; font:700 14px Assistant,sans-serif; color:var(--ink); background:#fff; text-decoration:none; white-space:nowrap; }
+  .ship-btn:hover{ background:var(--paper); }
   .finder-rate{ display:inline-flex; align-items:center; gap:6px; font-size:13.5px; color:var(--ink); text-decoration:none; white-space:nowrap; padding:2px 4px; }
   .finder-rate b{ font-weight:800; }
   .finder-rate span:last-child{ color:#6b6857; text-decoration:underline; text-underline-offset:3px; }
@@ -494,6 +501,8 @@
     .finder-rate .rv-stars svg{ width:12px; height:12px; }
     .finder-rate span:last-child{ display:none; }
     .finder-form{ order:3; }
+    .ship-btn{ position:absolute; left:20px; bottom:-28px; font-size:12.5px; padding:4px 12px; background:rgba(22,21,26,.35); color:#fff; border-color:rgba(255,255,255,.9); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); text-shadow:0 1px 3px rgba(0,0,0,.6); }
+    .ship-btn:hover{ background:rgba(22,21,26,.5); }
   }
 
   /* שורת מלל מתחת לכותרת, בנייד בלבד */
@@ -503,6 +512,32 @@
     .header-sub-addr{ display:inline-flex; align-items:center; gap:4px; color:var(--yellow); text-decoration:none; font-weight:600; }
     .header-sub-addr svg{ width:12px; height:12px; flex-shrink:0; }
   }
+
+  /* ---------- מידע על משלוחים ---------- */
+  .shipping{ padding:54px 0 46px; border-top:1px solid var(--line); background:linear-gradient(180deg,var(--paper) 0%, #fff 100%); scroll-margin-top:70px; }
+  .shipping h2{ font-size:30px; display:flex; align-items:center; gap:10px; margin-bottom:22px; }
+  .shipping h2 .ic{ width:32px; height:32px; color:var(--ink); }
+  .ship-grid{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); gap:18px; max-width:980px; align-items:stretch; }
+  .ship-card{ position:relative; background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px 20px 18px; box-shadow:0 10px 26px -18px rgba(22,21,26,.55); }
+  .ship-local{ background:linear-gradient(150deg,#FFF6C2 0%, #FFE453 100%); border:2px solid var(--ink); display:flex; flex-direction:column; justify-content:center; gap:4px; padding:26px 22px; overflow:hidden; }
+  .ship-local h3{ margin:6px 0 0; font-family:'Suez One',serif; font-weight:400; font-size:26px; color:var(--ink); }
+  .ship-local p{ margin:0; font-size:17px; color:var(--ink); }
+  .ship-hero{ width:54px; height:54px; border-radius:50%; background:var(--ink); color:var(--yellow); display:inline-flex; align-items:center; justify-content:center; }
+  .ship-hero svg{ width:28px; height:28px; }
+  .ship-badge{ position:absolute; top:14px; left:14px; transform:rotate(-8deg); background:#fff; color:#0b7a36; border:2px solid #0b7a36; border-radius:8px; padding:0 10px; font-family:'Suez One',serif; font-size:19px; line-height:1.4; box-shadow:2px 3px 0 rgba(0,0,0,.2); }
+  .ship-rest-title{ margin:0 0 10px; font-family:'Suez One',serif; font-weight:400; font-size:22px; }
+  .ship-tiers{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .ship-tag{ font-size:14px; color:#6b6857; font-weight:700; }
+  .ship-amt{ font-family:'Suez One',serif; font-size:34px; line-height:1.1; margin:0 0 12px; }
+  .ship-opts{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .ship-opts li{ display:flex; align-items:center; gap:9px; padding:9px 11px; border-radius:10px; background:var(--paper); border:1px solid var(--line); font-size:15.5px; }
+  .ship-ico{ width:22px; height:22px; color:var(--ink); display:inline-flex; flex-shrink:0; }
+  .ship-ico svg{ width:100%; height:100%; }
+  .ship-txt{ flex:1; }
+  .ship-price{ font-weight:800; font-size:16px; padding:1px 10px; border-radius:999px; background:var(--yellow); color:var(--ink); white-space:nowrap; }
+  .ship-price.free{ background:#DDF5E4; color:#0b7a36; }
+  .ship-thanks{ margin:18px 0 0; font-weight:700; }
+  @media (max-width:780px){ .ship-grid{ grid-template-columns:1fr; } .ship-tiers{ grid-template-columns:1fr; } .shipping{ padding:40px 0 34px; } .shipping h2{ font-size:25px; } }
 </style>
 </head>
 <body>
@@ -540,6 +575,7 @@
       <button type="button" data-q="Samsung M2020" class="fx-more">Samsung M2020</button>
     </div>
     <a class="finder-rate" href="https://www.google.com/maps/search/?api=1&query=%D7%9E%D7%A8%D7%9B%D7%96%20%D7%94%D7%93%D7%99%D7%95%20%D7%A0%D7%AA%D7%A0%D7%99%D7%94&query_place_id=ChIJoaKeII1BHRURnMAjm3OSssM" target="_blank" rel="noopener" aria-label="5.0 כוכבים, ביקורות בגוגל"><span class="rv-stars " aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><b>5.0</b><span>· ביקורות בגוגל</span></a>
+    <a class="ship-btn" href="#shipping"><span aria-hidden="true">🚚</span> מידע על משלוחים</a>
     </div>
   </div>
 </div>
@@ -600,6 +636,7 @@
     </div>
     <div class="cat-filters" id="catFilters" role="group" aria-label="סינון"></div>
     <div class="cat-count" id="catCount" aria-live="polite"></div>
+    <a class="cat-ship" href="#shipping"><span class="cs-ic" aria-hidden="true">🚚</span><span><b>משלוח חינם בנתניה והסביבה</b><span class="cs-rest"> · לשאר הארץ, תנאי משלוח</span></span><span class="cs-arr" aria-hidden="true">‹</span></a>
     <div class="cat-grid" id="catGrid"></div>
     <div class="cat-more" id="catMore" style="display:none"><button type="button" class="chip" id="catMoreBtn">הצג עוד מוצרים</button></div>
     <div class="cat-empty" id="catEmpty">
@@ -823,9 +860,45 @@
     <h2>למה אצלנו</h2>
     <ul class="why-points">
       <li><strong>חיסכון</strong><span>טונר ודיו במחיר משתלם משמעותית ממארז חדש ומקורי — בלי פשרה על איכות ההדפסה.</span></li>
-      <li><strong>מקומי</strong><span>חנות פיזית בנתניה, ומשלוח חינם באותו היום — בלי לשלוח בדואר ולחכות ימים.</span></li>
+      <li><strong>מקומי</strong><span>חנות פיזית בנתניה, ומשלוח חינם באותו היום בנתניה והסביבה — בלי לשלוח בדואר ולחכות ימים.</span></li>
       <li><strong>ליווי</strong><span>לא בטוחים מה בדיוק צריך? שולחים תמונה בוואטסאפ או מתקשרים, ומקבלים תשובה מהירה וברורה.</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="shipping" id="shipping" aria-labelledby="shipTitle">
+  <div class="wrap">
+    <h2 id="shipTitle"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="7" width="13" height="9" rx="1"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg> מידע על משלוחים</h2>
+    <div class="ship-grid">
+      <div class="ship-card ship-local">
+        <span class="ship-badge">חינם</span>
+        <span class="ship-hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span>
+        <h3>נתניה והסביבה</h3>
+        <p>משלוח ללא עלות, עד בית הלקוח.</p>
+      </div>
+      <div class="ship-rest">
+        <h3 class="ship-rest-title">שאר חלקי הארץ</h3>
+        <div class="ship-tiers">
+      <div class="ship-card">
+        <div class="ship-tag">הזמנה מעל</div>
+        <div class="ship-amt">120 ₪</div>
+        <ul class="ship-opts">
+          <li><span class="ship-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="ship-txt">נקודת מסירה</span><b class="ship-price free">ללא עלות</b></li>
+          <li><span class="ship-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="15.5" cy="12.5" r=".9" fill="currentColor"/></svg></span><span class="ship-txt">עד הדלת</span><b class="ship-price">30 ₪</b></li>
+        </ul>
+      </div>
+      <div class="ship-card">
+        <div class="ship-tag">הזמנה מעל</div>
+        <div class="ship-amt">250 ₪</div>
+        <ul class="ship-opts">
+          <li><span class="ship-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="ship-txt">נקודת מסירה</span><b class="ship-price free">ללא עלות</b></li>
+          <li><span class="ship-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="15.5" cy="12.5" r=".9" fill="currentColor"/></svg></span><span class="ship-txt">עד הדלת</span><b class="ship-price">20 ₪</b></li>
+        </ul>
+      </div>
+        </div>
+      </div>
+    </div>
+    <p class="ship-thanks">נשמח לעמוד לשירותכם.</p>
   </div>
 </section>
 
@@ -866,7 +939,7 @@
     <div class="modal-body">
       <span class="modal-tag">מבצע השבוע</span>
       <h2 id="promoModalTitle">קונים 4 טונרים — ומקבלים 1 מתנה!</h2>
-      <p class="modal-sub">מרכז הדיו נתניה · רח' המחקר 3 · משלוח חינם מהיום להיום</p>
+      <p class="modal-sub">מרכז הדיו נתניה · רח' המחקר 3 · משלוח חינם בנתניה והסביבה</p>
       <a class="btn btn-primary" style="width:100%; justify-content:center;" href="tel:+972553009967,,"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.8 3 4.2 3.4 3.8 4 3.8h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>התקשרו עכשיו</a>
     </div>
   </div>
