@@ -466,6 +466,7 @@
   .finder-row2 .finder-ex{ flex:1 1 auto; padding-top:0; }
   .ship-btn{ display:inline-flex; align-items:center; gap:6px; border:1.5px solid var(--ink); border-radius:999px; padding:5px 14px; font:700 14px Assistant,sans-serif; color:var(--ink); background:#fff; text-decoration:none; white-space:nowrap; }
   .ship-btn:hover{ background:var(--paper); }
+  @media (min-width:641px) and (max-width:1150px){ .finder-row2{ flex-wrap:nowrap; } .finder-ex .fx-more{ display:none; } }
   .finder-rate{ display:inline-flex; align-items:center; gap:6px; font-size:13.5px; color:var(--ink); text-decoration:none; white-space:nowrap; padding:2px 4px; }
   .finder-rate b{ font-weight:800; }
   .finder-rate span:last-child{ color:#6b6857; text-decoration:underline; text-underline-offset:3px; }
@@ -501,6 +502,7 @@
     .finder-rate .rv-stars svg{ width:12px; height:12px; }
     .finder-rate span:last-child{ display:none; }
     .finder-form{ order:3; }
+    .finder{ background:#E6DEC4; }
     .ship-btn{ position:absolute; left:20px; bottom:-28px; font-size:12.5px; padding:4px 12px; background:rgba(22,21,26,.35); color:#fff; border-color:rgba(255,255,255,.9); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); text-shadow:0 1px 3px rgba(0,0,0,.6); }
     .ship-btn:hover{ background:rgba(22,21,26,.5); }
   }
@@ -970,7 +972,7 @@
      type: 'toner' (טונר) | 'ink' (דיו) | 'drum' (תוף)
      name: שם הדגם | sku: מק"ט (לא חובה) | compat: מדפסות תואמות (אפשר להשאיר ריק)
      colors: רשימת צבעים לבחירה בתוך אותו כרטיס (לא חובה) | vn: שם דגם לכל צבע (לא חובה)
-     price: מחיר בש"ח. 0 = לא מציגים מחיר. */
+     price: מחיר בש"ח. 0 = לא מציגים מחיר. | bp: מחיר מיוחד לצבע שחור (לא חובה) */
   var C4 = ['שחור','ציאן','מגנטה','צהוב'], C2 = ['שחור','צבעוני'];
   var P = [
     /* ---------- HP טונרים ---------- */
@@ -998,10 +1000,10 @@
     {brand:'HP', type:'ink', name:'652', sku:'F6V25AE', colors:C2, compat:'DeskJet Ink Advantage 1115, 2135, 3635, 4535', price:75},
     {brand:'HP', type:'ink', name:'652XL', colors:C2, compat:'DeskJet Ink Advantage 1115, 2135, 3635, 4535', price:85},
     {brand:'HP', type:'ink', name:'305XL', colors:C2, compat:'DeskJet 2710, 2720, 2721, 4120, 4130, ENVY 6020, 6030, 6420', price:105},
-    {brand:'HP', type:'ink', name:'953XL', colors:C4, compat:'OfficeJet Pro 7740, 8210, 8218, 8710, 8720, 8730', price:70},
-    {brand:'HP', type:'ink', name:'912XL', colors:C4, compat:'OfficeJet Pro 8010, 8012, 8014, 8020, 8022, 8023, 8025', price:70},
-    {brand:'HP', type:'ink', name:'963', colors:C4, compat:'OfficeJet Pro 9010, 9012, 9014, 9020, 9022, 9025', price:70},
-    {brand:'HP', type:'ink', name:'924E', colors:C4, price:70},
+    {brand:'HP', type:'ink', name:'953XL', colors:C4, compat:'OfficeJet Pro 7740, 8210, 8218, 8710, 8720, 8730', price:70, bp:80},
+    {brand:'HP', type:'ink', name:'912XL', colors:C4, compat:'OfficeJet Pro 8010, 8012, 8014, 8020, 8022, 8023, 8025', price:70, bp:80},
+    {brand:'HP', type:'ink', name:'963', colors:C4, compat:'OfficeJet Pro 9010, 9012, 9014, 9020, 9022, 9025', price:70, bp:85},
+    {brand:'HP', type:'ink', name:'924E', colors:C4, price:70, bp:80},
     {brand:'HP', type:'ink', name:'903XL', colors:C4, compat:'OfficeJet Pro 6950, 6960, 6970', price:65},
     /* ---------- Canon ---------- */
     {brand:'Canon', type:'toner', name:'725', sku:'CRG-725', compat:'LBP6000, LBP6020, LBP6030, MF3010'},
@@ -1038,11 +1040,11 @@
     {brand:'Brother', type:'ink', name:'LC223', colors:C4, compat:'DCP-J562DW, MFC-J480DW, MFC-J680DW, MFC-J880DW, MFC-J4420DW, MFC-J4620DW, MFC-J5320DW, MFC-J5620DW, MFC-J5625DW, MFC-J5720DW', price:25},
     {brand:'Brother', type:'ink', name:'LC123', colors:C4, compat:'DCP-J132W, DCP-J152W, DCP-J552DW, DCP-J752DW, MFC-J470DW, MFC-J650DW, MFC-J870DW', price:25},
     {brand:'Brother', type:'ink', name:'LC421XL', colors:C4, compat:'DCP-J1050DW, DCP-J1140DW, MFC-J1010DW', price:45},
-    {brand:'Brother', type:'ink', name:'LC422XL', colors:C4, price:70},
-    {brand:'Brother', type:'ink', name:'LC521XL', colors:C4, price:85},
-    {brand:'Brother', type:'ink', name:'LC527XL', colors:C4, price:85},
+    {brand:'Brother', type:'ink', name:'LC422XL', colors:C4, compat:'MFC-J5340DW, MFC-J5345DW, MFC-J5740DW, MFC-J6540DW, MFC-J6740DW, MFC-J6940DW', price:70},
+    {brand:'Brother', type:'ink', name:'LC521XL', colors:C4, compat:'DCP-J100, DCP-J105, MFC-J200', price:85},
+    {brand:'Brother', type:'ink', name:'LC527XL', colors:C4, compat:'DCP-J100, DCP-J105, MFC-J200', price:70},
     {brand:'Brother', type:'ink', name:'LC426', colors:C4, price:70},
-    {brand:'Brother', type:'ink', name:'LC426XL', colors:C4, price:90},
+    {brand:'Brother', type:'ink', name:'LC426XL', colors:C4, compat:'MFC-J5855DW, MFC-J5955DW, MFC-J6555DW, MFC-J6955DW, MFC-J6957DW', price:90},
     /* ---------- Samsung ---------- */
     {brand:'Samsung', type:'toner', name:'111S', sku:'MLT-D111S', compat:'Xpress M2020, M2020W, M2022, M2022W, M2070, M2070W, M2070FW', price:100},
     {brand:'Samsung', type:'toner', name:'115S', sku:'MLT-D115S', compat:'Xpress M2620, M2820, M2870 series', price:110},
@@ -1082,20 +1084,22 @@
     {brand:'HP', type:'ink', name:'950XL / 951XL', colors:C4, vn:['950XL','951XL','951XL','951XL'], compat:'OfficeJet Pro 8100, 8600, 8610, 8620, 251dw, 276dw', price:55},
     {brand:'HP', type:'ink', name:'934XL / 935XL', colors:C4, vn:['934XL','935XL','935XL','935XL'], compat:'OfficeJet Pro 6230, 6830, 6835', price:55},
     {brand:'HP', type:'ink', name:'305', colors:C2, compat:'DeskJet 2710, 2720, 2721, 4120, 4130, ENVY 6020, 6030, 6420', price:80},
-    {brand:'HP', type:'ink', name:'305XXL', colors:C2, price:110},
-    {brand:'HP', type:'ink', name:'924', colors:C4, price:70},
+    {brand:'HP', type:'ink', name:'305XXL', colors:C2, compat:'DeskJet 2710, 2720, 2721, 4120, 4130, ENVY 6020, 6030, 6420', price:110},
     {brand:'HP', type:'ink', name:'308', colors:C2, price:80},
     {brand:'HP', type:'ink', name:'308XL', colors:C2, price:110},
+    {brand:'HP', type:'ink', name:'653', colors:C2, compat:'DeskJet Plus Ink Advantage 6075, 6475', price:85},
+    {brand:'HP', type:'ink', name:'123XL', colors:C2, compat:'DeskJet 2130, 2620, 2630, 3630, ENVY 4520, OfficeJet 3830, 4650', price:85},
     /* ---------- Canon — תוספת ---------- */
     {brand:'Canon', type:'toner', name:'047', sku:'CRG-047', compat:'LBP112, LBP113w, MF112, MF113w', price:95},
     {brand:'Canon', type:'toner', name:'051', sku:'CRG-051', compat:'LBP162dw, MF264dw, MF267dw, MF269dw', price:165},
     {brand:'Canon', type:'toner', name:'051H', sku:'CRG-051H', compat:'LBP162dw, MF264dw, MF267dw, MF269dw', price:165},
-    {brand:'Canon', type:'toner', name:'070', sku:'CRG-070', price:140},
-    {brand:'Canon', type:'toner', name:'071', sku:'CRG-071', price:115},
+    {brand:'Canon', type:'toner', name:'070', sku:'CRG-070', compat:'LBP243dw, LBP244dw, MF461dw, MF463dw, MF465dw', price:140},
+    {brand:'Canon', type:'toner', name:'071', sku:'CRG-071', compat:'LBP122dw, MF272dw, MF275dw', price:115},
     {brand:'Canon', type:'toner', name:'075', sku:'CRG-075', price:215},
     {brand:'Canon', type:'toner', name:'054', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['054 BK','054 C','054 Y','054 M'], compat:'LBP621Cw, LBP623Cdw, MF641Cw, MF643Cdw, MF645Cx', price:95},
     {brand:'Canon', type:'toner', name:'045', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['045 BK','045 C','045 Y','045 M'], compat:'LBP611Cn, LBP613Cdw, MF631Cn, MF633Cdw, MF635Cx', price:95},
     {brand:'Canon', type:'toner', name:'067', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['067 BK','067 C','067 Y','067 M'], compat:'LBP631Cw, LBP633Cdw, MF651Cw, MF655Cdw, MF657Cdw', price:125},
+    {brand:'Canon', type:'toner', name:'075H', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['075H BK','075H C','075H Y','075H M'], price:195},
     {brand:'Canon', type:'ink', name:'PG-510 שחור', sku:'PG-510', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700', price:60},
     {brand:'Canon', type:'ink', name:'CL-511 צבעוני', sku:'CL-511', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700', price:60},
     {brand:'Canon', type:'ink', name:'PG-512 שחור', sku:'PG-512', compat:'PIXMA MP240, MP250, MP260, MP270, MP280, MP480, MP490, MX320, MX330, MX350, iP2700', price:100},
@@ -1108,8 +1112,8 @@
     {brand:'Canon', type:'bottle', name:'GI-490', colors:C4, compat:'PIXMA G1400, G1410, G2400, G2410, G3400, G3410, G4400, G4410'},
     {brand:'Canon', type:'bottle', name:'GI-41', sku:'41S', colors:C4, compat:'PIXMA G1420, G2420, G3420', price:55},
     /* ---------- Epson בקבוקי דיו ---------- */
-    {brand:'Epson', type:'bottle', name:'103', colors:C4, price:45},
-    {brand:'Epson', type:'bottle', name:'101', colors:C4, price:45},
+    {brand:'Epson', type:'bottle', name:'103', colors:C4, compat:'L1110, L3100, L3110, L3150, L3156, L5190', price:45},
+    {brand:'Epson', type:'bottle', name:'101', colors:C4, compat:'L4150, L4160, L6160, L6170, L6190', price:45},
     {brand:'Epson', type:'bottle', name:'110', price:165},
     {brand:'Epson', type:'ink', name:'T9451', colors:C4, vn:['T9451','T9452','T9453','T9454'], price:150},
     {brand:'Epson', type:'ink', name:'T01D1', colors:C4, vn:['T01D1','T01D2','T01D3','T01D4'], price:230},
@@ -1149,12 +1153,12 @@
     {brand:'Pantum', type:'toner', name:'CTL-300', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['CTL-300K','CTL-300C','CTL-300Y','CTL-300M']},
     /* ---------- Kyocera ---------- */
     {brand:'Kyocera', type:'toner', name:'TK-1140', compat:'FS-1035MFP, FS-1135MFP, ECOSYS M2035dn, M2535dn', price:140},
-    {brand:'Kyocera', type:'toner', name:'TK-3060', price:140},
+    {brand:'Kyocera', type:'toner', name:'TK-3060', compat:'ECOSYS M3145idn, M3645idn', price:140},
     {brand:'Kyocera', type:'toner', name:'TK-3130', compat:'FS-4200DN, FS-4300DN, ECOSYS M3550idn, M3560idn', price:150},
-    {brand:'Kyocera', type:'toner', name:'TK-3160', price:165},
+    {brand:'Kyocera', type:'toner', name:'TK-3160', compat:'ECOSYS P3045dn, P3050dn, P3055dn, P3060dn', price:165},
     {brand:'Kyocera', type:'toner', name:'TK-3190', compat:'ECOSYS P3055dn, P3060dn, M3655idn, M3660idn', price:310},
-    {brand:'Kyocera', type:'toner', name:'TK-5270', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TK-5270K','TK-5270C','TK-5270Y','TK-5270M'], price:145},
-    {brand:'Kyocera', type:'toner', name:'TK-8335', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TK-8335K','TK-8335C','TK-8335Y','TK-8335M'], price:295},
+    {brand:'Kyocera', type:'toner', name:'TK-5270', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TK-5270K','TK-5270C','TK-5270Y','TK-5270M'], compat:'ECOSYS M6230cidn, M6630cidn, P6230cdn', price:145},
+    {brand:'Kyocera', type:'toner', name:'TK-8335', colors:['שחור','ציאן','צהוב','מגנטה'], vn:['TK-8335K','TK-8335C','TK-8335Y','TK-8335M'], compat:'TASKalfa 3252ci, 3253ci', price:295},
     /* ---------- Olivetti ---------- */
     {brand:'Olivetti', type:'toner', name:'1233', price:95},
     {brand:'Olivetti', type:'toner', name:'1235', price:100}
@@ -1194,7 +1198,7 @@
   function title(p){ return TYPE_HE[p.type] + ' ' + p.brand + ' ' + dname(p) + (p.colors ? ' ' + colorName(p) : ''); }
 
   PRODUCTS.forEach(function(p, i){
-    p._i = i; p.sel = 0;
+    p._i = i; p.sel = p.bp ? 1 : 0; /* עם מחיר שחור מיוחד: ברירת מחדל = צבע (המחיר הנמוך) */
     p.hay = norm([p.brand, p.name, (p.vn||[]).join(' '), p.sku||'', p.compat||'', TYPE_SEARCH[p.type], (p.colors||[]).join(' ')].join(' '));
   });
 
@@ -1269,7 +1273,8 @@
   var POPULAR = ['HP 85A','HP 83A','HP 12A','HP 78A','HP 26A','HP 44A','HP 106X','HP 106A','Brother TN-1050','Brother TN-2420','Brother TN-2320','Brother TN-2510XL','Canon 071','Pantum 410H'];
   function card(p){
     var msg = 'היי, אני מעוניין לרכוש ' + title(p) + (p.sku && p.sku !== p.name ? ' (' + p.sku + ')' : '') + '. אפשר לאשר מחיר וזמינות?';
-    var price = SHOW_PRICES && p.price > 0 ? '<div class="pcard-price"><span class="pp-num" dir="ltr">' + p.price + '<span class="pp-cur">&nbsp;&#8362;</span></span> <small>ליחידה</small></div>' : '';
+    var cp = (p.bp && p.sel === 0) ? p.bp : p.price;
+    var price = SHOW_PRICES && cp > 0 ? '<div class="pcard-price"><span class="pp-num" dir="ltr">' + cp + '<span class="pp-cur">&nbsp;&#8362;</span></span> <small>ליחידה</small></div>' : '';
     var sku = p.sku && p.sku !== dname(p) ? '<bdi dir="ltr">'+esc(p.sku)+'</bdi>' : '';
     var compat = p.compat ? 'מתאים ל: <bdi dir="ltr">'+esc(p.compat)+'</bdi>' : '';
     return '<article class="pcard" data-i="'+p._i+'">' +
